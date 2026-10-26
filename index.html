@@ -1311,6 +1311,35 @@
         .mini.image-reward.featured-catch,.mini.image-reward.featured-potm{justify-content:flex-end}
         @media(max-width:640px){.mini.image-reward{min-height:180px;background-position:center 40%;padding:16px}.mini.featured-catch,.mini.featured-potm{min-height:245px;background-position:center}.mini.image-reward:before{background:linear-gradient(0deg,rgba(2,12,29,.98) 0%,rgba(2,12,29,.85) 35%,rgba(2,12,29,.1) 100%)}}
 
+    
+        /* Mobile reward tiles: one full-width card per row, consistent alignment. */
+        @media (max-width: 640px) {
+            #rewards .mini-grid {
+                display:grid;
+                grid-template-columns:minmax(0,1fr);
+                gap:12px;
+            }
+            #rewards .mini-grid > .mini,
+            #rewards .mini-grid > .featured-catch,
+            #rewards .mini-grid > .featured-potm {
+                grid-column:1 / -1;
+                width:100%;
+                min-width:0;
+                min-height:120px;
+                padding:22px 20px;
+            }
+            #rewards .mini-grid > .image-reward {min-height:235px}
+            #rewards .mini-grid > .featured-catch,
+            #rewards .mini-grid > .featured-potm {min-height:285px}
+            #rewards .mini-grid > .image-reward {background-position:center 45%;background-size:cover}
+            #rewards .mini-grid > .featured-potm {
+                background-image:linear-gradient(0deg,rgba(2,12,29,.74),rgba(2,12,29,.10)),url('assets/mom-league.png');
+                background-position:center,center 44%;
+            }
+            #rewards .mini-grid .mini strong {font-size:33px}
+            #rewards .mini-grid .mini span {font-size:13px;line-height:1.55}
+        }
+
     </style>
 </head>
 
