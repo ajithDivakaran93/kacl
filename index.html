@@ -1267,7 +1267,39 @@
         @media (max-width:380px) {
             .hero-bg {background-position: 94% top}
         }
-</style>
+
+        /* Mobile branding: KACL logo tab projects below the sticky header. */
+        @media (max-width:640px) {
+            header {overflow:visible}
+            nav {height:60px;position:relative;overflow:visible}
+            .brand {position:relative;align-self:flex-start;z-index:55}
+            .brand img {
+                display:block;
+                width:108px;
+                height:78px;
+                max-height:none;
+                padding:6px 7px;
+                background:#fff;
+                border-radius:0 0 9px 9px;
+                box-shadow:0 7px 20px rgba(0,0,0,.32);
+                object-fit:contain;
+                object-position:center;
+            }
+            .navlinks {margin-left:auto}
+            .navlinks .btn {min-height:40px}
+            .hero {min-height:670px;min-height:min(705px,92svh)}
+            .hero-content {padding-top:190px;padding-bottom:30px}
+            .hero h1 {margin-top:0;margin-bottom:12px}
+            .hero h2 {margin-bottom:8px}
+            .hero-bg {background-position:90% top}
+        }
+        @media (max-width:380px) {
+            .brand img {width:100px;height:74px}
+            .hero {min-height:645px;min-height:min(680px,94svh)}
+            .hero-content {padding-top:172px}
+        }
+
+    </style>
 </head>
 
 <body>
@@ -1290,7 +1322,7 @@
         <section class="hero">
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="container hero-content">
-                <div class="season">Kerala Amateur Cricket League · Grand Season 4</div>
+                
                 <h1>BEYOND<br><span>THE GAME.</span></h1>
                 <h2>Beyond the Trophy.</h2>
                 <p>12 franchises. Bigger rewards. A bigger stage for Kerala's cricketing talent. The grandest KACL
