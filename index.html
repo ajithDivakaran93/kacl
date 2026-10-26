@@ -1391,6 +1391,14 @@
 nav .brand img{width:175px;height:104px}
 @media(max-width:640px){nav .brand img{width:126px;height:101px}.logos img{height:auto;max-height:520px}.mini .reward-note{font-size:13px!important}}
 @media(max-width:380px){nav .brand img{width:118px;height:96px}}
+
+/* Happiness Index brand placement */
+.header-happiness-logo{display:block;width:132px;height:73px;object-fit:contain;flex:0 1 auto;margin-left:14px;filter:drop-shadow(0 2px 5px #0005)}
+.happiness-tile{min-height:210px;background:#fff!important;padding:16px!important}
+.happiness-index-card-logo{display:block;width:100%;max-width:290px;height:180px;object-fit:contain;margin:auto;filter:none}
+@media(max-width:920px){.header-happiness-logo{width:102px;height:62px;margin-left:10px}}
+@media(max-width:640px){.header-happiness-logo{width:88px;height:53px;margin-left:5px;align-self:center}.happiness-index-card-logo{max-width:260px;height:190px}.happiness-tile{min-height:220px}}
+@media(max-width:380px){.header-happiness-logo{width:72px;height:48px;margin-left:3px}}
 </style>
 </head>
 
@@ -1398,7 +1406,7 @@ nav .brand img{width:175px;height:104px}
     <header>
         <div class="container">
             <nav><a class="brand" href="#top" aria-label="KACL Season 4 home"><img src="assets/kacl-logo.png"
-                        alt="KACL Grand Season 4 logo"></a>
+                        alt="KACL Grand Season 4 logo"></a><img class="header-happiness-logo" src="assets/happiness-index.png" alt="KACL Happiness Index logo" loading="eager">
                 <div class="navlinks"><a href="#about">The League</a><a href="#rewards">Player Rewards</a><a
                         href="#franchises">Franchise</a><a href="#schedule">Schedule</a><a
                         href="https://leaguelink.in/leagues/5465530/kacl-grand-season-4/register" class="btn"
@@ -1466,7 +1474,7 @@ nav .brand img{width:175px;height:104px}
                             <small>each</small></strong><span>Player of the Match · 24 players</span><b
                             class="mini-total">TOTAL VALUE ₹48,000</b></div>
                     <div class="mini image-reward reward-mom-playoff"><strong>₹5,000</strong><span>Player of the Match · Playoffs</span><b class="mini-total">TOTAL VALUE ₹35,000</b></div>
-                    <div class="mini happiness-tile"><span class="happiness-wordmark"><b>KACL</b><strong>Happiness Index</strong><small>Every player. Every moment. Every reward.</small></span></div>
+                    <div class="mini happiness-tile"><img class="happiness-index-card-logo" src="assets/happiness-index.png" alt="KACL Happiness Index"></div>
                 </div>
                 <p class="disclaimer">Motorcycles or equivalent awards are subject to the KACL’s prize policy. One bike per player; other award reassignment conditions apply. Applicable taxes on prizes may be borne by recipients.</p>
             </div>
