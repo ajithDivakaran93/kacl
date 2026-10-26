@@ -1254,7 +1254,20 @@
             .hero-content {padding-top: 250px}
         }
 
-    </style>
+    
+        /* Mobile: registration lives in the always-visible header, not a bottom bar. */
+        .mobile-cta {display:none!important}
+        @media (max-width:640px) {
+            .hero-bg {background-position: 90% top}
+            .hero::before {
+                background: linear-gradient(180deg,rgba(3,17,38,.02) 0%,rgba(3,17,38,.16) 31%,rgba(3,17,38,.64) 49%,rgba(3,17,38,.97) 76%,#031126 100%)
+            }
+            footer {padding-bottom: 30px}
+        }
+        @media (max-width:380px) {
+            .hero-bg {background-position: 94% top}
+        }
+</style>
 </head>
 
 <body>
@@ -1535,12 +1548,7 @@
                     League · Grand Season 4</span><span>Beyond the Game. Beyond the Trophy.</span></div>
         </div>
     </footer>
-    <div class="mobile-cta"><a class="btn" href="https://leaguelink.in/leagues/5465530/kacl-grand-season-4/register"
-            target="_blank" rel="noopener noreferrer">Register Now — ₹5,999 <svg class="cta-arrow" viewBox="0 0 24 24"
-                width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg></a></div>
+    
     <script>const ob = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ob.unobserve(e.target) } }) }, { threshold: .07 }); document.querySelectorAll('.reveal').forEach(el => ob.observe(el));</script>
 </body>
 
