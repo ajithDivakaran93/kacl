@@ -1299,6 +1299,18 @@
             .hero-content {padding-top:172px}
         }
 
+    
+        /* Player rewards: action visuals, with gradient fallback until asset files are committed */
+        .mini.image-reward{position:relative;isolation:isolate;overflow:hidden;min-height:205px;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;border:1px solid rgba(100,146,182,.5);background-color:#102c4c;background-size:cover;background-position:center}
+        .mini.image-reward:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(2,12,29,.98) 0%,rgba(2,12,29,.85) 33%,rgba(2,12,29,.16) 85%)}
+        .mini.image-reward strong,.mini.image-reward span,.mini.image-reward b{position:relative;z-index:1;text-shadow:0 2px 10px rgba(0,0,0,.65)}
+        .mini.reward-consistency{background-image:url('assets/best-batter-bowler.png')}
+        .mini.featured-catch{background-image:url('assets/each-catch.png');min-height:255px}
+        .mini.featured-potm{background-image:url('assets/mom-league.png');min-height:255px}
+        .mini.reward-mom-playoff{background-image:url('assets/mom-playoff.png')}
+        .mini.image-reward.featured-catch,.mini.image-reward.featured-potm{justify-content:flex-end}
+        @media(max-width:640px){.mini.image-reward{min-height:180px;background-position:center 40%;padding:16px}.mini.featured-catch,.mini.featured-potm{min-height:245px;background-position:center}.mini.image-reward:before{background:linear-gradient(0deg,rgba(2,12,29,.98) 0%,rgba(2,12,29,.85) 35%,rgba(2,12,29,.1) 100%)}}
+
     </style>
 </head>
 
@@ -1365,15 +1377,15 @@
                 <div class="mini-grid">
                     <div class="mini"><strong>₹10,000</strong><span>Best Fielder</span></div>
                     <div class="mini"><strong>₹10,000</strong><span>Best Wicketkeeper</span></div>
-                    <div class="mini"><strong>₹5,000</strong><span>Each of top 5 batters & top 5 bowlers (league)</span>
+                    <div class="mini image-reward reward-consistency"><strong>₹5,000</strong><span>Each of top 5 batters & top 5 bowlers (league)</span>
                     </div>
-                    <div class="mini featured-catch"><span class="mini-eyebrow">Catch Highlight</span><strong>₹1,000
+                    <div class="mini featured-catch image-reward"><span class="mini-eyebrow">Catch Highlight</span><strong>₹1,000
                             <small>per catch</small></strong><span>Reward for every league-stage catch</span><b
                             class="mini-total">TOTAL VALUE ₹4.8 LAKH</b></div>
-                    <div class="mini featured-potm"><span class="mini-eyebrow">24 League Matches</span><strong>₹2,000
+                    <div class="mini featured-potm image-reward"><span class="mini-eyebrow">24 League Matches</span><strong>₹2,000
                             <small>each</small></strong><span>Player of the Match · 24 players</span><b
                             class="mini-total">TOTAL VALUE ₹48,000</b></div>
-                    <div class="mini"><strong>₹5,000</strong><span>Player of the Match · Playoffs</span></div>
+                    <div class="mini image-reward reward-mom-playoff"><strong>₹5,000</strong><span>Player of the Match · Playoffs</span></div>
                     <div class="mini"><strong>₹5,999</strong><span>Player registration · GST included</span></div>
                 </div>
                 <p class="disclaimer">Motorcycles or equivalent-value awards are subject to the organizer's published
