@@ -1343,6 +1343,39 @@
     
         .mini.reward-fielder{background-image:url('assets/each-catch.png')}
         .mini.reward-wicketkeeper{background-image:url('assets/wkt-keeper.png')}
+    
+        /* Crisp, readable Season 4 logo tab on all screen sizes */
+        header {overflow:visible}
+        nav {position:relative;overflow:visible}
+        nav .brand {align-self:flex-start;position:relative;z-index:60;flex-shrink:0}
+        nav .brand img {
+            display:block;
+            width:154px;
+            height:92px;
+            max-height:none;
+            padding:7px 10px;
+            box-sizing:border-box;
+            object-fit:contain;
+            object-position:center center;
+            background:#fff;
+            border-radius:0 0 10px 10px;
+            box-shadow:0 8px 22px rgba(0,0,0,.3);
+        }
+        @media(max-width:640px){
+            nav .brand img{
+                width:116px;
+                height:94px;
+                max-height:none;
+                padding:7px;
+                border-radius:0 0 10px 10px;
+            }
+            nav .navlinks{margin-left:auto}
+            .hero-content{padding-top:190px}
+        }
+        @media(max-width:380px){
+            nav .brand img{width:106px;height:86px;padding:6px}
+        }
+
     </style>
 </head>
 
