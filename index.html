@@ -1211,6 +1211,49 @@
                 background: linear-gradient(0deg, #020e21 0%, rgba(2, 14, 33, .94) 21%, rgba(2, 14, 33, .58) 46%, transparent 75%)
             }
         }
+    
+        /* Mobile hero: keep the cricketer visible above the headline. */
+        @media (max-width:640px) {
+            .hero {
+                min-height: 720px;
+                min-height: min(780px, 100svh);
+                align-items: flex-end;
+                isolation: isolate;
+            }
+            .hero-bg {
+                opacity: 1;
+                background-size: auto 100%;
+                background-position: 63% top;
+                background-repeat: no-repeat;
+            }
+            .hero::before {
+                background: linear-gradient(180deg,
+                    rgba(3,17,38,.02) 0%,
+                    rgba(3,17,38,.04) 30%,
+                    rgba(3,17,38,.54) 47%,
+                    rgba(3,17,38,.96) 69%,
+                    #031126 100%);
+            }
+            .hero-content {
+                padding-top: 285px;
+                padding-bottom: 36px;
+            }
+            .hero h1 {
+                font-size: clamp(58px,15vw,82px);
+                margin-top: 18px;
+                margin-bottom: 13px;
+            }
+            .hero h2 {font-size: 27px;margin-bottom: 10px}
+            .hero p {max-width: 370px;margin-bottom: 0}
+            .hero-actions {margin-top: 16px}
+            .hero small {margin-top: 12px}
+        }
+        @media (max-width:380px) {
+            .hero {min-height: 690px}
+            .hero-bg {background-position: 62% top}
+            .hero-content {padding-top: 250px}
+        }
+
     </style>
 </head>
 
