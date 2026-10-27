@@ -1746,6 +1746,35 @@
 @media(max-width:640px){.navlinks .btn.header-register{min-height:39px;padding:10px 11px;font-size:10px;letter-spacing:.025em}}
 @media(max-width:380px){.navlinks .btn.header-register{padding:9px 8px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.header-register .register-label{animation:none}}
+
+/* Happiness Index information dialog */
+.happiness-trigger{cursor:pointer;appearance:none;-webkit-appearance:none;border:0;font:inherit}
+.header-happiness-trigger{display:flex;align-items:center;justify-content:center;background:transparent;padding:0;margin-left:14px;flex-shrink:1}
+.header-happiness-trigger .header-happiness-logo{margin-left:0}
+.happiness-trigger:focus-visible,.happiness-close:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.happiness-tile.happiness-trigger{width:100%;color:inherit}
+.happiness-trigger img{transition:transform .22s ease}
+@media(hover:hover){.happiness-trigger:hover img{transform:scale(1.045)}}
+.happiness-dialog{border:1px solid #345977;border-radius:16px;padding:0;width:min(680px,calc(100% - 30px));max-height:min(88dvh,870px);background:#061b35;color:#edf5ff;box-shadow:0 24px 90px #000b;overflow:auto;overscroll-behavior:contain}
+.happiness-dialog::backdrop{background:rgba(0,8,20,.82);backdrop-filter:blur(5px)}
+.happiness-dialog-header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:10px 18px;background:#092340;border-bottom:1px solid #284969}
+.happiness-dialog-header img{width:85px;height:51px;object-fit:contain;background:#fff;border-radius:5px;padding:4px}
+.happiness-close{display:grid;place-items:center;width:42px;height:42px;cursor:pointer;border-radius:50%;border:1px solid #52718a;background:#183b59;color:#fff;font-size:27px;line-height:1}
+.happiness-dialog-content{padding:26px 30px 34px}
+.happiness-dialog-content h2{font:900 clamp(37px,7vw,55px)/1 'Barlow Condensed',sans-serif;margin:0 0 12px;color:var(--gold);text-transform:uppercase}
+.happiness-subtitle{color:var(--teal)!important;font-weight:800;font-size:16px!important;line-height:1.45!important}
+.happiness-dialog-content p{font-size:14px;line-height:1.75;color:#d0dded;margin:0 0 15px}
+.happiness-dialog-content h3{font:800 30px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:28px 0 16px;color:#fff}
+.happiness-steps{display:grid;gap:10px}
+.happiness-steps section{display:flex;gap:14px;padding:17px;background:#0c2b4d;border:1px solid #244c6b;border-radius:9px}
+.happiness-steps section>span{color:var(--gold);font:900 29px 'Barlow Condensed',sans-serif;line-height:1}
+.happiness-steps h4{font:800 23px 'Barlow Condensed',sans-serif;color:#fff;margin:0 0 7px}
+.happiness-steps p{margin-bottom:0}
+.happiness-final{font-weight:900!important;color:var(--gold)!important;font-size:17px!important}
+@media(max-width:920px){.header-happiness-trigger{margin-left:10px}}
+@media(max-width:640px){.header-happiness-trigger{margin-left:5px}.happiness-dialog{max-height:90dvh;width:calc(100% - 18px);border-radius:12px}.happiness-dialog-content{padding:21px 18px 27px}.happiness-steps section{padding:14px;gap:10px}.happiness-dialog-content h3{margin-top:23px}.happiness-subtitle{font-size:15px!important}}
+@media(max-width:380px){.header-happiness-trigger{margin-left:3px}}
+@media(prefers-reduced-motion:reduce){.happiness-trigger img{transition:none}}
 </style>
 </head>
 
@@ -1753,8 +1782,7 @@
     <header>
         <div class="container">
             <nav><a class="brand" href="#top" aria-label="KACL Season 4 home"><img src="assets/kacl-logo.png"
-                        alt="KACL Grand Season 4 logo"></a><img class="header-happiness-logo"
-                    src="assets/happiness-index.png" alt="KACL Happiness Index logo" loading="eager">
+                        alt="KACL Grand Season 4 logo"></a><button type="button" class="happiness-trigger header-happiness-trigger" data-happiness-open aria-haspopup="dialog" aria-label="About KACL Happiness Index"><img class="header-happiness-logo" src="assets/happiness-index.png" alt="KACL Happiness Index logo" loading="eager"></button>
                 <div class="navlinks"><a href="#about">The League</a><a href="#rewards">Player Rewards</a><a
                         href="#franchises">Franchise</a><a href="#schedule">Schedule</a><a
                         href="https://leaguelink.in/leagues/5465530/kacl-grand-season-4/register" class="btn header-register"
@@ -1828,8 +1856,7 @@
                             class="mini-total">TOTAL VALUE ₹48,000</b></div>
                     <div class="mini image-reward reward-mom-playoff"><strong>₹5,000</strong><span>Player of the Match ·
                             Playoffs</span><b class="mini-total">TOTAL VALUE ₹35,000</b></div>
-                    <div class="mini happiness-tile"><img class="happiness-index-card-logo"
-                            src="assets/happiness-index.png" alt="KACL Happiness Index"></div>
+                    <button type="button" class="mini happiness-tile happiness-trigger" data-happiness-open aria-haspopup="dialog" aria-label="Learn about KACL Happiness Index"><img class="happiness-index-card-logo" src="assets/happiness-index.png" alt="KACL Happiness Index"></button>
                 </div>
                 <p class="disclaimer">Motorcycles or equivalent awards are subject to the KACL’s prize policy. One bike
                     per player; other award reassignment conditions apply. Applicable taxes on prizes may be borne by
@@ -2008,7 +2035,37 @@
         </div>
     </footer>
 
+<dialog id="happiness-dialog" class="happiness-dialog" aria-labelledby="happiness-title" aria-describedby="happiness-intro">
+<div class="happiness-dialog-header"><img src="assets/happiness-index.png" alt="KACL Happiness Index"><button type="button" class="happiness-close" data-happiness-close aria-label="Close Happiness Index information">×</button></div>
+<div class="happiness-dialog-content">
+<h2 id="happiness-title">KACL Happiness Index™️</h2>
+<p class="happiness-subtitle">More Rewards. More Recognition. More Reasons to Smile.</p>
+<p id="happiness-intro">The KACL Happiness Index™️ is our commitment to making KACL Grand Season 4 more rewarding for both players and franchise owners.</p>
+<p>Rather than measuring success only through match results and trophies, we create additional opportunities for participants to earn rewards, receive recognition, and enjoy memorable experiences throughout the tournament.</p>
+<h3>How Does It Work?</h3>
+<div class="happiness-steps">
+<section><span>01</span><div><h4>Every Performance Counts</h4><p>Players have opportunities to earn rewards for individual achievements, including catches, Man of the Match awards, and outstanding performances with the bat, ball, or behind the stumps.</p></div></section>
+<section><span>02</span><div><h4>Every Milestone Matters</h4><p>From league victories to knockout-stage achievements, the tournament recognizes important moments with meaningful rewards for players and franchise owners.</p></div></section>
+<section><span>03</span><div><h4>Every Participant Matters</h4><p>The Happiness Index extends beyond the winning team. It is designed to recognize individual excellence, reward team achievements, and make participation more valuable for everyone involved.</p></div></section>
+<section><span>04</span><div><h4>Partners Make More Possible</h4><p>Through brand partnerships, the Happiness Index creates opportunities for additional rewards, products, experiences, and special recognitions—connecting sponsors with players and owners in meaningful ways.</p></div></section>
+</div>
+<h3>Our Philosophy</h3>
+<p>The Happiness Index is not simply about how much prize money is distributed. It is about how many opportunities we create to celebrate achievement, reward effort, and make the tournament memorable.</p>
+<p>At KACL, the trophy celebrates the winner. The Happiness Index celebrates the people who make the game special.</p>
+<p class="happiness-final">Measuring success by the smiles we create.</p>
+</div></dialog>
     <script>const ob = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ob.unobserve(e.target) } }) }, { threshold: .07 }); document.querySelectorAll('.reveal').forEach(el => ob.observe(el));</script>
-</body>
+<script>
+(function(){
+ const dialog=document.getElementById('happiness-dialog');
+ const triggers=document.querySelectorAll('[data-happiness-open]');
+ const close=dialog.querySelector('[data-happiness-close]');
+ let opener=null;
+ triggers.forEach(trigger=>trigger.addEventListener('click',()=>{opener=trigger;if(!dialog.open)dialog.showModal();}));
+ close.addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+ dialog.addEventListener('close',()=>{if(opener)opener.focus()});
+})();
+</script></body>
 
 </html>
