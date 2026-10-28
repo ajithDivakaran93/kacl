@@ -2061,6 +2061,22 @@
  .hero>.hero-content>.hero-actions .btn{font-size:9px!important}
  .hero .sreesanth-banner strong{font-size:23px!important}
 }
+
+/* Final mobile spacing: bring the hero copy lower and remove dead space below */
+@media(max-width:640px){
+ .hero{min-height:0!important;height:auto!important}
+ .hero>.hero-content{
+   min-height:0!important;
+   padding-top:clamp(180px,27svh,260px)!important;
+   padding-bottom:19px!important;
+   align-content:start!important;
+ }
+ .hero>.hero-content>p{margin-top:19px!important}
+ .hero>.hero-content>small{margin-bottom:0!important}
+}
+@media(max-width:380px){
+ .hero>.hero-content{padding-top:clamp(160px,24svh,220px)!important;padding-bottom:17px!important}
+}
 </style>
 </head>
 
