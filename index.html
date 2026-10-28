@@ -1669,7 +1669,7 @@
         .mini .reward-note {
             font-size: 13px !important
         }
-        
+
 
         @media(max-width:380px) {
             nav .brand img {
@@ -3336,8 +3336,8 @@
                     linear-gradient(90deg, rgba(2, 12, 27, .94) 0%, rgba(2, 12, 27, .78) 29%, rgba(2, 12, 27, .42) 48%, rgba(2, 12, 27, .04) 85%),
                     linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .32) 25%, rgba(3, 18, 38, .02) 76%),
                     url('assets/kacl-ambassador.png') !important;
-                background-size: 103% 104%, 100% 100%, auto 116% !important;
-                background-position: top, center, 28% 73% !important;
+                background-size: 103% 104%, 100% 100%, auto 74% !important;
+                background-position: top, center, -106% top !important;
                 background-repeat: no-repeat !important;
             }
 
@@ -3346,243 +3346,597 @@
                 text-shadow: 0 3px 16px rgba(0, 0, 0, .7) !important
             }
         }
-    
-/* Desktop hero cleanup: balanced copy column with full ambassador portrait */
-@media(min-width:921px){
- .hero{overflow:hidden!important;min-height:0!important}
- .hero>.hero-bg{
-  position:absolute!important;inset:0!important;z-index:0!important;
-  background-image:linear-gradient(90deg,#031226 0%,rgba(3,18,38,.96) 25%,rgba(3,18,38,.68) 48%,rgba(3,18,38,.07) 86%),linear-gradient(0deg,rgba(3,18,38,.55),transparent 48%),url('assets/kacl-ambassador.png')!important;
-  background-size:cover!important;background-position:center,center,77% 30%!important;
- }
- .hero>.hero-content{
-  z-index:1!important;display:flex!important;flex-direction:column!important;
-  justify-content:center!important;align-items:flex-start!important;
-  min-height:clamp(660px,82vh,850px)!important;
-  padding-top:78px!important;padding-bottom:65px!important;
-  gap:0!important;
- }
- .hero .sreesanth-banner{
-  order:3!important;width:min(450px,43%)!important;max-width:43%!important;
-  margin:22px 0 0!important;padding:14px 18px!important;
- }
- .hero .sreesanth-banner strong{font-size:clamp(33px,3.2vw,47px)!important}
- .hero .sreesanth-intro{font-size:10px!important}
- .hero>.hero-content>h1{
-  order:0!important;font-size:clamp(66px,6.4vw,112px)!important;
-  line-height:.88!important;max-width:55%!important;margin:0 0 11px!important;
- }
- .hero>.hero-content>h2{order:1!important;font-size:clamp(25px,2.6vw,38px)!important;max-width:55%!important;margin:0 0 5px!important}
- .hero>.hero-content>p{order:2!important;max-width:43%!important;font-size:clamp(14px,1.1vw,17px)!important;line-height:1.55!important;margin:16px 0 0!important}
- .hero>.hero-content>.hero-actions{order:4!important;max-width:52%!important;margin:20px 0 0!important;display:flex!important;flex-wrap:wrap!important;gap:12px!important}
- .hero>.hero-content>small{order:5!important;max-width:52%!important;margin-top:12px!important}
-}
-@media(min-width:921px) and (max-width:1180px){
- .hero>.hero-content>h1{font-size:clamp(59px,6.2vw,78px)!important}
- .hero .sreesanth-banner,.hero>.hero-content>p{max-width:49%!important;width:49%!important}
- .hero>.hero-content>.hero-actions{max-width:54%!important}
-}
 
-/* Desktop: keep existing hero order, lower headline visually without reordering */
-@media(min-width:921px){
- .hero>.hero-content{padding-top:clamp(112px,15vh,170px)!important}
- .hero>.hero-content>h1{margin-top:clamp(28px,5vh,70px)!important}
-}
+        /* Desktop hero cleanup: balanced copy column with full ambassador portrait */
+        @media(min-width:921px) {
+            .hero {
+                overflow: hidden !important;
+                min-height: 0 !important
+            }
 
-/* Desktop: ambassador details to right of CTA row; hero headline stays above */
-@media(min-width:921px){
- .hero>.hero-content{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-areas:"headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration"!important;column-gap:28px!important;row-gap:12px!important;align-content:center!important;align-items:center!important}
- .hero>.hero-content>h1{grid-area:headline!important;order:unset!important;margin:clamp(28px,5vh,70px) 0 0!important;max-width:620px!important}
- .hero>.hero-content>h2{grid-area:tagline!important;order:unset!important;max-width:620px!important;margin:0 0 10px!important}
- .hero>.hero-content>.hero-actions{grid-area:buttons!important;order:unset!important;max-width:100%!important;width:100%!important;margin:0!important;display:flex!important;flex-wrap:wrap!important;gap:10px!important}
- .hero .sreesanth-banner{grid-area:ambassador!important;order:unset!important;justify-self:end!important;max-width:440px!important;width:100%!important;margin:0!important;padding:14px 18px!important}
- .hero>.hero-content>p{grid-area:summary!important;order:unset!important;max-width:620px!important;width:auto!important;margin:10px 0 0!important}
- .hero>.hero-content>small{grid-area:registration!important;order:unset!important;max-width:620px!important;margin:0!important}
-}
+            .hero>.hero-bg {
+                position: absolute !important;
+                inset: 0 !important;
+                z-index: 0 !important;
+                background-image: linear-gradient(90deg, #031226 0%, rgba(3, 18, 38, .96) 25%, rgba(3, 18, 38, .68) 48%, rgba(3, 18, 38, .07) 86%), linear-gradient(0deg, rgba(3, 18, 38, .55), transparent 48%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 77% 30% !important;
+            }
 
-/* Desktop ambassador plaque visually docked to the right side of the viewport */
-@media(min-width:921px){
- .hero .sreesanth-banner{
-  justify-self:end!important;
-  width:clamp(360px,34vw,540px)!important;
-  max-width:none!important;
-  margin-right:calc((min(100vw, 100% + 0px) - 100vw)/2)!important;
-  transform:translateX(max(0px,calc((100vw - 1180px)/2)))!important;
-  border-radius:14px 0 0 14px!important;
-  border-left:4px solid #ffce1b!important;
-  border-right:0!important;
-  padding:19px 26px!important;
-  background:linear-gradient(100deg,rgba(5,20,40,.92),rgba(5,20,40,.78))!important;
-  box-shadow:-14px 12px 36px rgba(0,0,0,.32)!important;
- }
-}
+            .hero>.hero-content {
+                z-index: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: flex-start !important;
+                min-height: clamp(660px, 82vh, 850px) !important;
+                padding-top: 78px !important;
+                padding-bottom: 65px !important;
+                gap: 0 !important;
+            }
 
-/* KACL premium stadium-style hero layout inspired by approved visual reference */
-@media(min-width:921px){
- .hero{background:#04152a!important;overflow:hidden!important;isolation:isolate!important}
- .hero>.hero-bg{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;opacity:1!important;
-   background-image:linear-gradient(90deg,#031329 0%,rgba(3,19,41,.98) 24%,rgba(3,19,41,.74) 50%,rgba(3,19,41,.13) 82%),linear-gradient(0deg,rgba(2,13,31,.80),rgba(2,13,31,.05) 60%),url('assets/kacl-ambassador.png')!important;
-   background-size:100% 100%,100% 100%,auto 125%!important;
-   background-position:center,center,right 30%!important;background-repeat:no-repeat!important}
- .hero>.hero-content{position:relative!important;z-index:1!important;display:grid!important;
-  grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)!important;
-  grid-template-areas:"headline space" "tagline space" "buttons ambassador" "summary summary" "registration registration"!important;
-  align-content:center!important;align-items:center!important;
-  column-gap:20px!important;row-gap:13px!important;
-  min-height:clamp(640px,81vh,810px)!important;padding:92px 0 64px!important}
- .hero>.hero-content>h1{grid-area:headline!important;order:unset!important;max-width:100%!important;
-  font-size:clamp(72px,6.4vw,122px)!important;line-height:.86!important;margin:0 0 4px!important;text-shadow:0 4px 24px #0009}
- .hero>.hero-content>h2{grid-area:tagline!important;order:unset!important;max-width:100%!important;
-  font-size:clamp(25px,2.2vw,36px)!important;margin:0 0 7px!important}
- .hero>.hero-content>.hero-actions{grid-area:buttons!important;order:unset!important;max-width:100%!important;width:100%!important;
-  display:flex!important;flex-wrap:wrap!important;gap:12px!important;margin:0!important;align-self:center!important}
- .hero>.hero-content>.hero-actions>.btn{font-size:clamp(11px,.85vw,14px)!important;padding:14px 18px!important}
- .hero .sreesanth-banner{grid-area:ambassador!important;order:unset!important;justify-self:end!important;align-self:center!important;
-  transform:none!important;width:100%!important;max-width:420px!important;margin:0!important;
-  padding:15px 19px!important;border-radius:12px!important;
-  background:linear-gradient(115deg,rgba(4,22,44,.92),rgba(4,22,44,.70))!important;
-  border:1px solid rgba(255,206,27,.34)!important;border-left:4px solid #ffce1b!important}
- .hero .sreesanth-banner strong{font-size:clamp(30px,2.9vw,44px)!important}
- .hero>.hero-content>p{grid-area:summary!important;order:unset!important;max-width:700px!important;width:auto!important;margin:12px 0 0!important;
-  font-size:clamp(14px,1.05vw,18px)!important;line-height:1.65!important}
- .hero>.hero-content>small{grid-area:registration!important;order:unset!important;max-width:700px!important;margin:0!important}
-}
-@media(min-width:921px) and (max-width:1200px){
- .hero>.hero-content{padding-left:20px!important;padding-right:20px!important}
- .hero>.hero-content>h1{font-size:clamp(65px,6.1vw,85px)!important}
- .hero>.hero-content>.hero-actions>.btn{padding:12px 13px!important}
-}
+            .hero .sreesanth-banner {
+                order: 3 !important;
+                width: min(450px, 43%) !important;
+                max-width: 43% !important;
+                margin: 22px 0 0 !important;
+                padding: 14px 18px !important;
+            }
 
-/* Desktop visual polish: seamless portrait fade and unobstructed ambassador */
-@media(min-width:921px){
- .hero>.hero-bg{
-   background-image:linear-gradient(90deg,#031329 0%,#061b36 57%,#09213d 100%)!important;
-   background-size:100% 100%!important;
-   background-position:center!important;
-   overflow:hidden!important;
- }
- .hero>.hero-bg::after{
-   content:"";position:absolute;inset:0 0 0 auto;
-   width:68%;height:100%;
-   background-image:linear-gradient(0deg,rgba(3,19,41,.55),rgba(3,19,41,.10) 60%),url('assets/kacl-ambassador.png');
-   background-size:100% 100%,auto 108%;
-   background-position:center,right 31%;
-   background-repeat:no-repeat;
-   -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 15%,#000 39%);
-   mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 15%,#000 39%);
- }
- .hero .sreesanth-banner{
-   max-width:340px!important;
-   padding:13px 16px!important;
-   justify-self:end!important;
-   align-self:end!important;
-   margin-bottom:-18px!important;
-   background:rgba(3,16,33,.88)!important;
-   backdrop-filter:blur(9px);
- }
- .hero .sreesanth-banner strong{font-size:clamp(29px,2.3vw,38px)!important}
- .hero .sreesanth-role{font-size:12px!important}
- .hero>.hero-content{row-gap:11px!important}
-}
+            .hero .sreesanth-banner strong {
+                font-size: clamp(33px, 3.2vw, 47px) !important
+            }
 
-/* Desktop hero – approved reference: cinematic navy, gold, athlete right, compact plaque */
-@media (min-width:921px){
- .hero{background:#04152b!important;overflow:hidden!important}
- .hero>.hero-bg{position:absolute!important;inset:0!important;z-index:0!important;
- background:radial-gradient(ellipse at 77% 37%,#294257 0%,#0a2442 37%,#031329 76%)!important}
- .hero>.hero-bg::before{content:"";position:absolute;inset:0;opacity:.35;
- background:radial-gradient(ellipse 26% 16% at 84% 22%,#d5dde1 0%,transparent 100%),
- radial-gradient(ellipse 38% 24% at 63% 53%,#46627b 0%,transparent 100%),
- linear-gradient(165deg,transparent 48%,rgba(255,206,27,.2) 49%,transparent 50%);
- pointer-events:none}
- .hero>.hero-bg::after{content:"";position:absolute!important;inset:0 0 0 auto!important;width:61%!important;height:100%!important;
- background-image:linear-gradient(0deg,rgba(3,15,30,.8) 0%,rgba(3,15,30,.05) 48%),linear-gradient(90deg,rgba(3,19,41,.85),rgba(3,19,41,.14) 35%,rgba(3,19,41,.08)),url('assets/kacl-ambassador.png')!important;
- background-size:100% 100%,100% 100%,auto 116%!important;background-position:center,center,right 27%!important;
- background-repeat:no-repeat!important;mask-image:linear-gradient(90deg,transparent 0%,#000 21%)!important;
- -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 21%)!important}
- .hero>.hero-content{z-index:1!important;display:grid!important;
- grid-template-columns:minmax(0, 1.12fr) minmax(0,.88fr)!important;
- grid-template-areas:"headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration"!important;
- min-height:clamp(655px,83vh,840px)!important;padding:88px 0 58px!important;
- column-gap:10px!important;row-gap:13px!important;align-content:center!important;align-items:center!important}
- .hero>.hero-content>h1{grid-area:headline!important;max-width:620px!important;font-size:clamp(77px,6.5vw,120px)!important;line-height:.86!important;margin:0!important}
- .hero>.hero-content>h2{grid-area:tagline!important;max-width:620px!important;font-size:clamp(27px,2.3vw,37px)!important;margin:0 0 7px!important}
- .hero>.hero-content>.hero-actions{grid-area:buttons!important;max-width:100%!important;width:100%!important;margin:0!important;display:flex!important;flex-wrap:wrap!important;gap:12px!important}
- .hero>.hero-content>.hero-actions .btn{padding:14px 18px!important;font-size:clamp(11px,.82vw,14px)!important}
- .hero .sreesanth-banner{grid-area:ambassador!important;justify-self:start!important;align-self:center!important;
- width:min(100%,440px)!important;max-width:440px!important;margin:0!important;transform:translateX(-12px)!important;
- padding:16px 20px!important;background:rgba(4,20,42,.88)!important;border-radius:12px!important;
- border:1px solid rgba(255,206,27,.33)!important;border-left:4px solid #ffce1b!important;
- box-shadow:0 12px 35px rgba(0,0,0,.35)!important}
- .hero .sreesanth-banner strong{font-size:clamp(32px,2.65vw,47px)!important}
- .hero .sreesanth-role{font-size:14px!important}
- .hero>.hero-content>p{grid-area:summary!important;max-width:730px!important;width:auto!important;margin:17px 0 0!important;font-size:clamp(15px,1.03vw,18px)!important}
- .hero>.hero-content>small{grid-area:registration!important;max-width:700px!important;margin:0!important}
-}
-@media (min-width:921px) and (max-width:1200px){
- .hero>.hero-content{padding-left:20px!important;padding-right:20px!important}
- .hero>.hero-content>h1{font-size:clamp(65px,6vw,85px)!important}
- .hero .sreesanth-banner{transform:none!important}
-}
+            .hero .sreesanth-intro {
+                font-size: 10px !important
+            }
 
-/* Clean photo only: no flattened website artwork behind live UI */
-@media(min-width:921px){
- .hero{overflow:hidden!important;background:#031329!important}
- .hero>.hero-bg{position:absolute!important;inset:0!important;z-index:0!important;opacity:1!important;
-  background:radial-gradient(ellipse at 78% 25%,#243950 0%,#0b2440 35%,#031329 78%)!important}
- .hero>.hero-bg::after{
-  content:""!important;position:absolute!important;inset:0 0 0 auto!important;
-  width:67%!important;height:100%!important;
-  background-image:linear-gradient(0deg,rgba(3,15,34,.65),rgba(3,15,34,.12) 65%),
-                   linear-gradient(90deg,rgba(3,19,41,.6),transparent 35%),
-                   url('assets/kacl-ambassador.png')!important;
-  background-size:100% 100%,100% 100%,auto 103%!important;
-  background-position:center,center,right 34%!important;background-repeat:no-repeat!important;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 15%,#000 38%)!important;
-  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 15%,#000 38%)!important;
- }
- .hero>.hero-content{position:relative!important;z-index:1!important}
-}
-@media(max-width:640px){
- .hero>.hero-bg{background-image:
-  linear-gradient(90deg,rgba(2,13,31,.93),rgba(2,13,31,.66) 34%,rgba(2,13,31,.08)),
-  linear-gradient(0deg,#031226 0%,rgba(3,18,38,.14) 60%,transparent),
-  url('assets/kacl-ambassador.png')!important;
-  background-size:100% 100%,100% 100%,auto 112%!important;
-  background-position:center,center,70% top!important;background-repeat:no-repeat!important}
-}
+            .hero>.hero-content>h1 {
+                order: 0 !important;
+                font-size: clamp(66px, 6.4vw, 112px) !important;
+                line-height: .88 !important;
+                max-width: 55% !important;
+                margin: 0 0 11px !important;
+            }
 
-/* Seamless desktop hero: one continuous image layer, no right-hand rectangular crop */
-@media(min-width:921px){
- .hero>.hero-bg{
-  display:block!important;position:absolute!important;inset:0!important;
-  width:100%!important;height:100%!important;opacity:1!important;z-index:0!important;
-  background-image:
-   linear-gradient(90deg,#031329 0%,rgba(3,19,41,.97) 21%,rgba(3,19,41,.86) 38%,rgba(3,19,41,.42) 62%,rgba(3,19,41,.28) 100%),
-   linear-gradient(0deg,rgba(3,19,41,.86),transparent 38%),
-   linear-gradient(180deg,rgba(4,20,39,.55),rgba(4,20,39,.13) 50%,rgba(4,20,39,.45)),
-   url('assets/kacl-ambassador.png')!important;
-  background-size:100% 100%,100% 100%,100% 100%,cover!important;
-  background-position:center,center,center,66% 34%!important;
-  background-repeat:no-repeat!important;
- }
- .hero>.hero-bg::after,.hero>.hero-bg::before{content:none!important;display:none!important}
- .hero>.hero-content{position:relative!important;z-index:1!important}
-}
+            .hero>.hero-content>h2 {
+                order: 1 !important;
+                font-size: clamp(25px, 2.6vw, 38px) !important;
+                max-width: 55% !important;
+                margin: 0 0 5px !important
+            }
 
-/* Mobile-only stadium ambassador artwork, keep all live UI and desktop artwork intact */
-@media(max-width:640px){
- .hero>.hero-bg{
-  background-image:
-    linear-gradient(90deg,rgba(2,13,31,.88) 0%,rgba(2,13,31,.66) 35%,rgba(2,13,31,.10) 100%),
-    linear-gradient(0deg,#031226 0%,rgba(3,18,38,.23) 42%,transparent 84%),
-    url('assets/kacl-stadium-ambassador.jpg')!important;
-  background-size:100% 100%,100% 100%,auto 112%!important;
-  background-position:center,center,72% top!important;
-  background-repeat:no-repeat!important;
- }
-}
-</style>
+            .hero>.hero-content>p {
+                order: 2 !important;
+                max-width: 43% !important;
+                font-size: clamp(14px, 1.1vw, 17px) !important;
+                line-height: 1.55 !important;
+                margin: 16px 0 0 !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                order: 4 !important;
+                max-width: 52% !important;
+                margin: 20px 0 0 !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 12px !important
+            }
+
+            .hero>.hero-content>small {
+                order: 5 !important;
+                max-width: 52% !important;
+                margin-top: 12px !important
+            }
+        }
+
+        @media(min-width:921px) and (max-width:1180px) {
+            .hero>.hero-content>h1 {
+                font-size: clamp(59px, 6.2vw, 78px) !important
+            }
+
+            .hero .sreesanth-banner,
+            .hero>.hero-content>p {
+                max-width: 49% !important;
+                width: 49% !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                max-width: 54% !important
+            }
+        }
+
+        /* Desktop: keep existing hero order, lower headline visually without reordering */
+        @media(min-width:921px) {
+            .hero>.hero-content {
+                padding-top: clamp(112px, 15vh, 170px) !important
+            }
+
+            .hero>.hero-content>h1 {
+                margin-top: clamp(28px, 5vh, 70px) !important
+            }
+        }
+
+        /* Desktop: ambassador details to right of CTA row; hero headline stays above */
+        @media(min-width:921px) {
+            .hero>.hero-content {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+                grid-template-areas: "headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration" !important;
+                column-gap: 28px !important;
+                row-gap: 12px !important;
+                align-content: center !important;
+                align-items: center !important
+            }
+
+            .hero>.hero-content>h1 {
+                grid-area: headline !important;
+                order: unset !important;
+                margin: clamp(28px, 5vh, 70px) 0 0 !important;
+                max-width: 620px !important
+            }
+
+            .hero>.hero-content>h2 {
+                grid-area: tagline !important;
+                order: unset !important;
+                max-width: 620px !important;
+                margin: 0 0 10px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                grid-area: buttons !important;
+                order: unset !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 10px !important
+            }
+
+            .hero .sreesanth-banner {
+                grid-area: ambassador !important;
+                order: unset !important;
+                justify-self: end !important;
+                max-width: 440px !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 14px 18px !important
+            }
+
+            .hero>.hero-content>p {
+                grid-area: summary !important;
+                order: unset !important;
+                max-width: 620px !important;
+                width: auto !important;
+                margin: 10px 0 0 !important
+            }
+
+            .hero>.hero-content>small {
+                grid-area: registration !important;
+                order: unset !important;
+                max-width: 620px !important;
+                margin: 0 !important
+            }
+        }
+
+        /* Desktop ambassador plaque visually docked to the right side of the viewport */
+        @media(min-width:921px) {
+            .hero .sreesanth-banner {
+                justify-self: end !important;
+                width: clamp(360px, 34vw, 540px) !important;
+                max-width: none !important;
+                margin-right: calc((min(100vw, 100% + 0px) - 100vw)/2) !important;
+                transform: translateX(max(0px, calc((100vw - 1180px)/2))) !important;
+                border-radius: 14px 0 0 14px !important;
+                border-left: 4px solid #ffce1b !important;
+                border-right: 0 !important;
+                padding: 19px 26px !important;
+                background: linear-gradient(100deg, rgba(5, 20, 40, .92), rgba(5, 20, 40, .78)) !important;
+                box-shadow: -14px 12px 36px rgba(0, 0, 0, .32) !important;
+            }
+        }
+
+        /* KACL premium stadium-style hero layout inspired by approved visual reference */
+        @media(min-width:921px) {
+            .hero {
+                background: #04152a !important;
+                overflow: hidden !important;
+                isolation: isolate !important
+            }
+
+            .hero>.hero-bg {
+                display: block !important;
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                z-index: 0 !important;
+                opacity: 1 !important;
+                background-image: linear-gradient(90deg, #031329 0%, rgba(3, 19, 41, .98) 24%, rgba(3, 19, 41, .74) 50%, rgba(3, 19, 41, .13) 82%), linear-gradient(0deg, rgba(2, 13, 31, .80), rgba(2, 13, 31, .05) 60%), url('assets/kacl-ambassador.png') !important;
+                background-size: 100% 100%, 100% 100%, auto 125% !important;
+                background-position: center, center, right 30% !important;
+                background-repeat: no-repeat !important
+            }
+
+            .hero>.hero-content {
+                position: relative !important;
+                z-index: 1 !important;
+                display: grid !important;
+                grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr) !important;
+                grid-template-areas: "headline space" "tagline space" "buttons ambassador" "summary summary" "registration registration" !important;
+                align-content: center !important;
+                align-items: center !important;
+                column-gap: 20px !important;
+                row-gap: 13px !important;
+                min-height: clamp(640px, 81vh, 810px) !important;
+                padding: 92px 0 64px !important
+            }
+
+            .hero>.hero-content>h1 {
+                grid-area: headline !important;
+                order: unset !important;
+                max-width: 100% !important;
+                font-size: clamp(72px, 6.4vw, 122px) !important;
+                line-height: .86 !important;
+                margin: 0 0 4px !important;
+                text-shadow: 0 4px 24px #0009
+            }
+
+            .hero>.hero-content>h2 {
+                grid-area: tagline !important;
+                order: unset !important;
+                max-width: 100% !important;
+                font-size: clamp(25px, 2.2vw, 36px) !important;
+                margin: 0 0 7px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                grid-area: buttons !important;
+                order: unset !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 12px !important;
+                margin: 0 !important;
+                align-self: center !important
+            }
+
+            .hero>.hero-content>.hero-actions>.btn {
+                font-size: clamp(11px, .85vw, 14px) !important;
+                padding: 14px 18px !important
+            }
+
+            .hero .sreesanth-banner {
+                grid-area: ambassador !important;
+                order: unset !important;
+                justify-self: end !important;
+                align-self: center !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 420px !important;
+                margin: 0 !important;
+                padding: 15px 19px !important;
+                border-radius: 12px !important;
+                background: linear-gradient(115deg, rgba(4, 22, 44, .92), rgba(4, 22, 44, .70)) !important;
+                border: 1px solid rgba(255, 206, 27, .34) !important;
+                border-left: 4px solid #ffce1b !important
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(30px, 2.9vw, 44px) !important
+            }
+
+            .hero>.hero-content>p {
+                grid-area: summary !important;
+                order: unset !important;
+                max-width: 700px !important;
+                width: auto !important;
+                margin: 12px 0 0 !important;
+                font-size: clamp(14px, 1.05vw, 18px) !important;
+                line-height: 1.65 !important
+            }
+
+            .hero>.hero-content>small {
+                grid-area: registration !important;
+                order: unset !important;
+                max-width: 700px !important;
+                margin: 0 !important
+            }
+        }
+
+        @media(min-width:921px) and (max-width:1200px) {
+            .hero>.hero-content {
+                padding-left: 20px !important;
+                padding-right: 20px !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: clamp(65px, 6.1vw, 85px) !important
+            }
+
+            .hero>.hero-content>.hero-actions>.btn {
+                padding: 12px 13px !important
+            }
+        }
+
+        /* Desktop visual polish: seamless portrait fade and unobstructed ambassador */
+        @media(min-width:921px) {
+            .hero>.hero-bg {
+                background-image: linear-gradient(90deg, #031329 0%, #061b36 57%, #09213d 100%) !important;
+                background-size: 100% 100% !important;
+                background-position: center !important;
+                overflow: hidden !important;
+            }
+
+            .hero>.hero-bg::after {
+                content: "";
+                position: absolute;
+                inset: 0 0 0 auto;
+                width: 68%;
+                height: 100%;
+                background-image: linear-gradient(0deg, rgba(3, 19, 41, .55), rgba(3, 19, 41, .10) 60%), url('assets/kacl-ambassador.png');
+                background-size: 100% 100%, auto 108%;
+                background-position: center, right 31%;
+                background-repeat: no-repeat;
+                -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .25) 15%, #000 39%);
+                mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .25) 15%, #000 39%);
+            }
+
+            .hero .sreesanth-banner {
+                max-width: 340px !important;
+                padding: 13px 16px !important;
+                justify-self: end !important;
+                align-self: end !important;
+                margin-bottom: -18px !important;
+                background: rgba(3, 16, 33, .88) !important;
+                backdrop-filter: blur(9px);
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(29px, 2.3vw, 38px) !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 12px !important
+            }
+
+            .hero>.hero-content {
+                row-gap: 11px !important
+            }
+        }
+
+        /* Desktop hero – approved reference: cinematic navy, gold, athlete right, compact plaque */
+        @media (min-width:921px) {
+            .hero {
+                background: #04152b !important;
+                overflow: hidden !important
+            }
+
+            .hero>.hero-bg {
+                position: absolute !important;
+                inset: 0 !important;
+                z-index: 0 !important;
+                background: radial-gradient(ellipse at 77% 37%, #294257 0%, #0a2442 37%, #031329 76%) !important
+            }
+
+            .hero>.hero-bg::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                opacity: .35;
+                background: radial-gradient(ellipse 26% 16% at 84% 22%, #d5dde1 0%, transparent 100%),
+                    radial-gradient(ellipse 38% 24% at 63% 53%, #46627b 0%, transparent 100%),
+                    linear-gradient(165deg, transparent 48%, rgba(255, 206, 27, .2) 49%, transparent 50%);
+                pointer-events: none
+            }
+
+            .hero>.hero-bg::after {
+                content: "";
+                position: absolute !important;
+                inset: 0 0 0 auto !important;
+                width: 61% !important;
+                height: 100% !important;
+                background-image: linear-gradient(0deg, rgba(3, 15, 30, .8) 0%, rgba(3, 15, 30, .05) 48%), linear-gradient(90deg, rgba(3, 19, 41, .85), rgba(3, 19, 41, .14) 35%, rgba(3, 19, 41, .08)), url('assets/kacl-ambassador.png') !important;
+                background-size: 100% 100%, 100% 100%, auto 116% !important;
+                background-position: center, center, right 27% !important;
+                background-repeat: no-repeat !important;
+                mask-image: linear-gradient(90deg, transparent 0%, #000 21%) !important;
+                -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 21%) !important
+            }
+
+            .hero>.hero-content {
+                z-index: 1 !important;
+                display: grid !important;
+                grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr) !important;
+                grid-template-areas: "headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration" !important;
+                min-height: clamp(655px, 83vh, 840px) !important;
+                padding: 88px 0 58px !important;
+                column-gap: 10px !important;
+                row-gap: 13px !important;
+                align-content: center !important;
+                align-items: center !important
+            }
+
+            .hero>.hero-content>h1 {
+                grid-area: headline !important;
+                max-width: 620px !important;
+                font-size: clamp(77px, 6.5vw, 120px) !important;
+                line-height: .86 !important;
+                margin: 0 !important
+            }
+
+            .hero>.hero-content>h2 {
+                grid-area: tagline !important;
+                max-width: 620px !important;
+                font-size: clamp(27px, 2.3vw, 37px) !important;
+                margin: 0 0 7px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                grid-area: buttons !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 12px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                padding: 14px 18px !important;
+                font-size: clamp(11px, .82vw, 14px) !important
+            }
+
+            .hero .sreesanth-banner {
+                grid-area: ambassador !important;
+                justify-self: start !important;
+                align-self: center !important;
+                width: min(100%, 440px) !important;
+                max-width: 440px !important;
+                margin: 0 !important;
+                transform: translateX(-12px) !important;
+                padding: 16px 20px !important;
+                background: rgba(4, 20, 42, .88) !important;
+                border-radius: 12px !important;
+                border: 1px solid rgba(255, 206, 27, .33) !important;
+                border-left: 4px solid #ffce1b !important;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, .35) !important
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(32px, 2.65vw, 47px) !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 14px !important
+            }
+
+            .hero>.hero-content>p {
+                grid-area: summary !important;
+                max-width: 730px !important;
+                width: auto !important;
+                margin: 17px 0 0 !important;
+                font-size: clamp(15px, 1.03vw, 18px) !important
+            }
+
+            .hero>.hero-content>small {
+                grid-area: registration !important;
+                max-width: 700px !important;
+                margin: 0 !important
+            }
+        }
+
+        @media (min-width:921px) and (max-width:1200px) {
+            .hero>.hero-content {
+                padding-left: 20px !important;
+                padding-right: 20px !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: clamp(65px, 6vw, 85px) !important
+            }
+
+            .hero .sreesanth-banner {
+                transform: none !important
+            }
+        }
+
+        /* Clean photo only: no flattened website artwork behind live UI */
+        @media(min-width:921px) {
+            .hero {
+                overflow: hidden !important;
+                background: #031329 !important
+            }
+
+            .hero>.hero-bg {
+                position: absolute !important;
+                inset: 0 !important;
+                z-index: 0 !important;
+                opacity: 1 !important;
+                background: radial-gradient(ellipse at 78% 25%, #243950 0%, #0b2440 35%, #031329 78%) !important
+            }
+
+            .hero>.hero-bg::after {
+                content: "" !important;
+                position: absolute !important;
+                inset: 0 0 0 auto !important;
+                width: 67% !important;
+                height: 100% !important;
+                background-image: linear-gradient(0deg, rgba(3, 15, 34, .65), rgba(3, 15, 34, .12) 65%),
+                    linear-gradient(90deg, rgba(3, 19, 41, .6), transparent 35%),
+                    url('assets/kacl-ambassador.png') !important;
+                background-size: 100% 100%, 100% 100%, auto 103% !important;
+                background-position: center, center, right 34% !important;
+                background-repeat: no-repeat !important;
+                -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .3) 15%, #000 38%) !important;
+                mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .3) 15%, #000 38%) !important;
+            }
+
+            .hero>.hero-content {
+                position: relative !important;
+                z-index: 1 !important
+            }
+        }
+
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                background-image:
+                    linear-gradient(90deg, rgba(2, 13, 31, .93), rgba(2, 13, 31, .66) 34%, rgba(2, 13, 31, .08)),
+                    linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .14) 60%, transparent),
+                    url('assets/kacl-ambassador.png') !important;
+                background-size: 100% 100%, 100% 100%, auto 74% !important;
+                background-position: center, center, -106% top !important;
+                background-repeat: no-repeat !important
+            }
+        }
+
+        /* Seamless desktop hero: one continuous image layer, no right-hand rectangular crop */
+        @media(min-width:921px) {
+            .hero>.hero-bg {
+                display: block !important;
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                opacity: 1 !important;
+                z-index: 0 !important;
+                background-image:
+                    linear-gradient(90deg, #031329 0%, rgba(3, 19, 41, .97) 21%, rgba(3, 19, 41, .86) 38%, rgba(3, 19, 41, .42) 62%, rgba(3, 19, 41, .28) 100%),
+                    linear-gradient(0deg, rgba(3, 19, 41, .86), transparent 38%),
+                    linear-gradient(180deg, rgba(4, 20, 39, .55), rgba(4, 20, 39, .13) 50%, rgba(4, 20, 39, .45)),
+                    url('assets/kacl-ambassador.png') !important;
+                background-size: 100% 100%, 100% 100%, 100% 100%, cover !important;
+                background-position: center, center, center, 66% 34% !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .hero>.hero-bg::after,
+            .hero>.hero-bg::before {
+                content: none !important;
+                display: none !important
+            }
+
+            .hero>.hero-content {
+                position: relative !important;
+                z-index: 1 !important
+            }
+        }
+
+        /* Mobile-only stadium ambassador artwork, keep all live UI and desktop artwork intact */
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                background-image:
+                    linear-gradient(90deg, rgba(2, 13, 31, .88) 0%, rgba(2, 13, 31, .66) 35%, rgba(2, 13, 31, .10) 100%),
+                    linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .23) 42%, transparent 84%),
+                    url('assets/kacl-stadium-ambassador.jpg') !important;
+                background-size: 100% 100%, 100% 100%, auto 90% !important;
+                background-position: center, center, -15% 90% !important;
+                background-repeat: no-repeat !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
