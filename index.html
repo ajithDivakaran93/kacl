@@ -3382,6 +3382,52 @@
  .hero .sreesanth-banner,.hero>.hero-content>p{max-width:49%!important;width:49%!important}
  .hero>.hero-content>.hero-actions{max-width:54%!important}
 }
+
+/* Desktop hero: registration on left / ambassador text on right, Beyond below */
+@media(min-width:921px){
+ .hero>.hero-content{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-areas:"buttons ambassador" "headline headline" "tagline tagline" "summary summary" "registration registration"!important;
+  column-gap:clamp(25px,4vw,70px)!important;row-gap:12px!important;
+  align-content:end!important;align-items:center!important;
+  min-height:clamp(690px,88vh,920px)!important;
+  padding-top:clamp(155px,19vh,220px)!important;
+  padding-bottom:clamp(35px,5vh,65px)!important;
+ }
+ .hero>.hero-content>.hero-actions{
+  grid-area:buttons!important;order:unset!important;
+  max-width:100%!important;width:100%!important;margin:0!important;
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:11px!important;
+ }
+ .hero>.hero-content>.hero-actions .btn{font-size:clamp(11px,.9vw,14px)!important;padding:13px 15px!important}
+ .hero .sreesanth-banner{
+  grid-area:ambassador!important;order:unset!important;
+  justify-self:end!important;align-self:center!important;
+  width:min(100%,440px)!important;max-width:100%!important;
+  margin:0!important;padding:14px 20px!important;
+  background:linear-gradient(110deg,rgba(3,17,34,.9),rgba(3,17,34,.76))!important;
+ }
+ .hero .sreesanth-banner strong{font-size:clamp(33px,3vw,47px)!important}
+ .hero>.hero-content>h1{
+  grid-area:headline!important;order:unset!important;
+  font-size:clamp(67px,6vw,105px)!important;line-height:.9!important;
+  margin:28px 0 0!important;max-width:680px!important;align-self:end!important;
+ }
+ .hero>.hero-content>h2{
+  grid-area:tagline!important;order:unset!important;
+  font-size:clamp(26px,2.35vw,36px)!important;max-width:650px!important;margin:0!important;
+ }
+ .hero>.hero-content>p{
+  grid-area:summary!important;order:unset!important;
+  max-width:620px!important;width:auto!important;margin:2px 0 0!important;
+  font-size:clamp(14px,1vw,17px)!important;
+ }
+ .hero>.hero-content>small{
+  grid-area:registration!important;order:unset!important;
+  max-width:650px!important;margin:0!important;
+ }
+}
 </style>
 </head>
 
