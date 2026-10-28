@@ -1960,6 +1960,46 @@
  .hero>.hero-content>h1{font-size:35px!important}
  .hero>.hero-content>.hero-actions .btn{font-size:10px!important;padding:10px!important}
 }
+
+/* Ambassador and registration share the lead row; Beyond headline moves below */
+@media(max-width:640px){
+ .hero{position:relative!important;background:#031226!important;isolation:isolate}
+ .hero>.hero-bg{
+  position:absolute!important;inset:0 0 auto!important;height:570px!important;width:100%!important;z-index:-1!important;
+  background-image:linear-gradient(90deg,#031226ed 0%,#031226af 36%,#0312261a 72%),linear-gradient(0deg,#031226 0%,#03122640 31%,transparent 65%),url('assets/kacl-ambassador.jpg')!important;
+  background-size:cover!important;background-position:center,center,67% top!important;
+ }
+ .hero>.hero-content{
+  display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;
+  min-height:0!important;padding:315px 18px 36px!important;background:none!important;
+ }
+ .hero .sreesanth-banner{
+  order:0!important;width:55%!important;max-width:55%!important;
+  margin:0 0 14px!important;padding:10px 9px!important;
+  background:rgba(4,18,37,.76)!important;backdrop-filter:blur(5px);
+ }
+ .hero .sreesanth-banner strong{font-size:clamp(22px,6vw,30px)!important}
+ .hero .sreesanth-intro{font-size:8px!important;letter-spacing:.07em!important}
+ .hero .sreesanth-role{font-size:10px!important}
+ .hero>.hero-content>.hero-actions{
+  order:1!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  width:55%!important;max-width:55%!important;gap:8px!important;margin:0 0 52px!important
+ }
+ .hero .hero-actions .btn{width:100%!important;min-height:42px!important;padding:10px 8px!important;font-size:10px!important;justify-content:center!important;text-align:center!important;white-space:normal!important;line-height:1.1!important}
+ .hero .hero-actions .cta-arrow{width:13px;height:13px;flex-shrink:0}
+ .hero>.hero-content>h1{
+  order:2!important;max-width:100%!important;width:100%!important;
+  font-size:clamp(43px,11.6vw,60px)!important;line-height:.92!important;margin:0 0 10px!important
+ }
+ .hero>.hero-content>h2{order:3!important;max-width:100%!important;margin:0 0 13px!important}
+ .hero>.hero-content>p{order:4!important;max-width:100%!important;font-size:13px!important;margin:0 0 12px!important}
+ .hero>.hero-content>small{order:5!important;max-width:100%!important}
+}
+@media(max-width:380px){
+ .hero>.hero-content{padding:285px 14px 32px!important}
+ .hero>.hero-bg{height:545px!important}
+ .hero .sreesanth-banner,.hero>.hero-content>.hero-actions{width:58%!important;max-width:58%!important}
+}
 </style>
 </head>
 
