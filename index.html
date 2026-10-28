@@ -3569,6 +3569,19 @@
  .hero>.hero-bg::after,.hero>.hero-bg::before{content:none!important;display:none!important}
  .hero>.hero-content{position:relative!important;z-index:1!important}
 }
+
+/* Mobile-only stadium ambassador artwork, keep all live UI and desktop artwork intact */
+@media(max-width:640px){
+ .hero>.hero-bg{
+  background-image:
+    linear-gradient(90deg,rgba(2,13,31,.88) 0%,rgba(2,13,31,.66) 35%,rgba(2,13,31,.10) 100%),
+    linear-gradient(0deg,#031226 0%,rgba(3,18,38,.23) 42%,transparent 84%),
+    url('assets/kacl-stadium-ambassador.jpg')!important;
+  background-size:100% 100%,100% 100%,auto 112%!important;
+  background-position:center,center,72% top!important;
+  background-repeat:no-repeat!important;
+ }
+}
 </style>
 </head>
 
