@@ -1805,6 +1805,32 @@
 }
 @keyframes ambassador-mobile-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.ambassador-spotlight{animation:none}}
+
+/* Hero redesign: the ambassador is the star of the first mobile viewport */
+@media (min-width:921px){
+ .hero .ambassador-spotlight{right:1.5%;width:clamp(350px,34vw,470px);height:clamp(475px,47vw,610px);border:0;border-radius:22px;box-shadow:0 24px 72px rgba(0,0,0,.45),0 0 0 1px rgba(255,211,63,.45)}
+ .hero .ambassador-picture{background-position:center 25%}
+ .hero .ambassador-copy{padding:95px 30px 28px}
+ .hero .ambassador-copy>strong{font-size:clamp(44px,4.2vw,61px)}
+ .hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:56%}
+}
+@media(max-width:640px){
+ .hero{min-height:0!important;height:auto!important;overflow:hidden}
+ .hero .hero-content{padding-top:97px!important;padding-bottom:36px!important;display:flex;flex-direction:column;align-items:stretch;gap:0}
+ .hero .ambassador-spotlight{order:-1!important;position:relative!important;top:auto!important;right:auto!important;transform:none!important;display:block;width:calc(100% + 32px)!important;max-width:none!important;margin:0 -16px 22px!important;height:clamp(355px,57svh,490px)!important;border-radius:0 0 22px 22px!important;border:0!important;border-bottom:3px solid #ffce1b!important;box-shadow:0 19px 45px #0009;animation:ambassador-mobile-enter .6s ease both}
+ .hero .ambassador-picture{background-position:center 24%!important;background-size:cover!important}
+ .hero .ambassador-copy{padding:70px 22px 20px;background:linear-gradient(0deg,#041326 5%,#041326ee 40%,#04132600 100%)}
+ .hero .ambassador-kicker{font-size:10px;letter-spacing:.14em;margin-bottom:8px}
+ .hero .ambassador-copy>strong{font-size:clamp(43px,12vw,58px)!important;line-height:.89;letter-spacing:.008em;text-shadow:0 4px 14px #000b}
+ .hero .ambassador-divider{margin:10px 0 9px}
+ .hero .ambassador-copy p{font-size:14px!important;line-height:1.3!important;max-width:100%}
+ .hero .hero-content>h1{order:0!important;font-size:clamp(49px,12vw,72px)!important;line-height:.9!important;margin:0 0 7px!important}
+ .hero .hero-content>h2{order:1!important;margin:0 0 10px!important}
+ .hero .hero-content>p{order:2!important;margin:0 0 15px!important}
+ .hero .hero-actions{order:3!important;margin-top:0!important}
+ .hero .hero-content>small{order:4!important;margin-top:9px!important}
+}
+@media(max-width:380px){.hero .hero-content{padding-top:93px!important}.hero .ambassador-spotlight{height:350px!important}}
 </style>
 </head>
 
