@@ -2026,6 +2026,41 @@
  .hero>.hero-content>h1{font-size:33px!important}
  .hero>.hero-content>.hero-actions .btn{font-size:9px!important}
 }
+
+/* Correct mobile layout: headline first, then buttons LEFT and ambassador RIGHT */
+@media(max-width:640px){
+ .hero>.hero-bg{height:100%!important;background-image:linear-gradient(90deg,rgba(2,13,31,.96) 0%,rgba(2,13,31,.70) 40%,rgba(2,13,31,.1) 100%),linear-gradient(0deg,#031226 0%,rgba(3,18,38,.25) 55%,transparent 92%),url('assets/kacl-ambassador.jpg')!important;background-size:cover!important;background-position:center,center,68% top!important}
+ .hero>.hero-content{
+  display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-areas:"headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration"!important;
+  column-gap:12px!important;row-gap:9px!important;align-items:center!important;
+  padding:122px 16px 33px!important;min-height:590px!important;align-content:start!important;
+ }
+ .hero>.hero-content>h1{grid-area:headline!important;font-size:clamp(40px,11vw,59px)!important;max-width:100%!important;margin:0!important}
+ .hero>.hero-content>h2{grid-area:tagline!important;font-size:clamp(20px,5vw,27px)!important;max-width:100%!important;margin:0 0 24px!important}
+ .hero>.hero-content>.hero-actions{
+  grid-area:buttons!important;display:flex!important;flex-direction:column!important;
+  width:100%!important;max-width:100%!important;margin:0!important;gap:10px!important;align-self:end!important;
+ }
+ .hero>.hero-content>.hero-actions .btn{width:100%!important;min-height:48px!important;padding:10px 7px!important;font-size:clamp(10px,2.5vw,12px)!important;line-height:1.25!important;text-align:center!important;justify-content:center!important;white-space:normal!important}
+ .hero .sreesanth-banner{
+  grid-area:ambassador!important;width:100%!important;max-width:100%!important;
+  align-self:end!important;margin:0!important;padding:10px!important;
+  background:rgba(3,18,38,.72)!important;border-left:3px solid #ffce1b!important;
+ }
+ .hero .sreesanth-banner strong{font-size:clamp(23px,6vw,32px)!important}
+ .hero .sreesanth-intro{font-size:8px!important;letter-spacing:.05em!important}
+ .hero .sreesanth-role{font-size:10px!important;line-height:1.35!important}
+ .hero>.hero-content>p{grid-area:summary!important;max-width:100%!important;margin:30px 0 4px!important;font-size:13px!important}
+ .hero>.hero-content>small{grid-area:registration!important;max-width:100%!important;margin:0!important}
+}
+@media(max-width:380px){
+ .hero>.hero-content{padding:105px 12px 28px!important;column-gap:8px!important}
+ .hero>.hero-content>h1{font-size:39px!important}
+ .hero>.hero-content>h2{font-size:19px!important}
+ .hero>.hero-content>.hero-actions .btn{font-size:9px!important}
+ .hero .sreesanth-banner strong{font-size:23px!important}
+}
 </style>
 </head>
 
