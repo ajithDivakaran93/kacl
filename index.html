@@ -3525,28 +3525,31 @@
  .hero .sreesanth-banner{transform:none!important}
 }
 
-/* KACL stadium ambassador artwork: true background asset, never a flattened website screenshot */
+/* Clean photo only: no flattened website artwork behind live UI */
 @media(min-width:921px){
- .hero>.hero-bg{background:radial-gradient(ellipse at 72% 35%,#183856 0%,#061b35 56%,#031329 100%)!important}
+ .hero{overflow:hidden!important;background:#031329!important}
+ .hero>.hero-bg{position:absolute!important;inset:0!important;z-index:0!important;opacity:1!important;
+  background:radial-gradient(ellipse at 78% 25%,#243950 0%,#0b2440 35%,#031329 78%)!important}
  .hero>.hero-bg::after{
-   content:""!important;position:absolute!important;inset:0 0 0 auto!important;
-   width:64%!important;height:100%!important;
-   background-image:linear-gradient(0deg,rgba(3,17,36,.35),transparent 65%),url('assets/kacl-stadium-ambassador.jpg')!important;
-   background-position:center,right center!important;
-   background-size:100% 100%,auto 100%!important;
-   background-repeat:no-repeat!important;
-   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%)!important;
-   mask-image:linear-gradient(90deg,transparent 0%,#000 28%)!important;
+  content:""!important;position:absolute!important;inset:0 0 0 auto!important;
+  width:67%!important;height:100%!important;
+  background-image:linear-gradient(0deg,rgba(3,15,34,.65),rgba(3,15,34,.12) 65%),
+                   linear-gradient(90deg,rgba(3,19,41,.6),transparent 35%),
+                   url('assets/kacl-ambassador.png')!important;
+  background-size:100% 100%,100% 100%,auto 103%!important;
+  background-position:center,center,right 34%!important;background-repeat:no-repeat!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 15%,#000 38%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 15%,#000 38%)!important;
  }
  .hero>.hero-content{position:relative!important;z-index:1!important}
 }
 @media(max-width:640px){
- .hero>.hero-bg{
-   background-image:linear-gradient(90deg,rgba(2,13,31,.94) 0%,rgba(2,13,31,.65) 37%,rgba(2,13,31,.15) 100%),linear-gradient(0deg,#031226 0%,rgba(3,18,38,.16) 60%,transparent 100%),url('assets/kacl-stadium-ambassador.jpg')!important;
-   background-size:100% 100%,100% 100%,auto 100%!important;
-   background-position:center,center,right top!important;
-   background-repeat:no-repeat!important;
- }
+ .hero>.hero-bg{background-image:
+  linear-gradient(90deg,rgba(2,13,31,.93),rgba(2,13,31,.66) 34%,rgba(2,13,31,.08)),
+  linear-gradient(0deg,#031226 0%,rgba(3,18,38,.14) 60%,transparent),
+  url('assets/kacl-ambassador.png')!important;
+  background-size:100% 100%,100% 100%,auto 112%!important;
+  background-position:center,center,70% top!important;background-repeat:no-repeat!important}
 }
 </style>
 </head>
