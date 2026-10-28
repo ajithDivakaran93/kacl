@@ -1778,6 +1778,33 @@
 @media(max-width:640px){.header-happiness-trigger{margin-left:5px}.happiness-dialog{max-height:90dvh;width:calc(100% - 18px);border-radius:12px}.happiness-dialog-content{padding:21px 18px 27px}.happiness-steps section{padding:14px;gap:10px}.happiness-dialog-content h3{margin-top:23px}.happiness-subtitle{font-size:15px!important}}
 @media(max-width:380px){.header-happiness-trigger{margin-left:3px}}
 @media(prefers-reduced-motion:reduce){.happiness-trigger img{transition:none}}
+
+/* Homepage ambassador spotlight: cinematic portrait with premium gold credentials */
+.hero .hero-content{position:relative}
+.ambassador-spotlight{position:absolute;right:0;top:50%;transform:translateY(-43%);width:clamp(225px,29vw,380px);height:clamp(330px,39vw,480px);z-index:3;border:1px solid rgba(255,207,54,.55);border-radius:17px;overflow:hidden;background:#07223c;box-shadow:0 20px 65px #000a,0 0 0 5px #ffffff0a;isolation:isolate;animation:ambassador-enter .8s ease both}
+.ambassador-picture{position:absolute;inset:0;background:linear-gradient(180deg,transparent 15%,#061b3450 48%,#031327 97%),url('assets/kacl-ambassador.jpg') center 18%/cover no-repeat;z-index:-1}
+.ambassador-copy{position:absolute;bottom:0;left:0;right:0;padding:40px 22px 23px;background:linear-gradient(0deg,#041326 10%,#051a2be0 60%,transparent);text-align:left}
+.ambassador-kicker{display:flex;align-items:center;gap:7px;font-size:9px;font-weight:900;letter-spacing:.16em;color:#cbd9e4;margin-bottom:7px}
+.ambassador-dot{height:6px;width:6px;background:#ffcc23;border-radius:50%;box-shadow:0 0 12px #ffcc23}
+.ambassador-copy>strong{display:block;font:900 clamp(27px,3.2vw,44px)/.94 'Barlow Condensed',sans-serif;color:#fff;letter-spacing:.014em}
+.ambassador-copy>strong em{font-style:normal;color:#ffce1b}
+.ambassador-divider{display:block;width:46px;height:3px;background:#ffce1b;margin:11px 0}
+.hero .ambassador-copy p{font-size:clamp(12px,1.25vw,15px);line-height:1.4;color:#e4effb;margin:0;max-width:none}
+.ambassador-copy p b{color:#fff}
+@keyframes ambassador-enter{from{opacity:0;transform:translate(25px,-40%)}to{opacity:1;transform:translate(0,-43%)}}
+@media(min-width:921px){.hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:60%}.hero .hero-actions{flex-wrap:wrap}}
+@media(min-width:641px) and (max-width:920px){.ambassador-spotlight{right:0;width:255px;height:365px}.hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:62%}}
+@media(max-width:640px){
+.hero .hero-content{display:flex;flex-direction:column}
+.hero .ambassador-spotlight{position:relative;top:auto;right:auto;transform:none;order:5;width:100%;height:310px;margin:20px auto 5px;max-width:390px;animation:ambassador-mobile-enter .7s ease both}
+.hero .ambassador-picture{background-position:center 27%;background-size:cover}
+.hero .ambassador-copy{padding:35px 18px 19px}
+.hero .ambassador-copy>strong{font-size:34px}
+.hero .ambassador-copy p{font-size:13px}
+.hero .hero-content{padding-bottom:28px}
+}
+@keyframes ambassador-mobile-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.ambassador-spotlight{animation:none}}
 </style>
 </head>
 
@@ -1811,6 +1838,15 @@
                             <path d="M5 12h14M13 6l6 6-6 6" />
                         </svg></a><a class="btn outline" href="#rewards">Explore the Rewards ↓</a></div><small>Player
                     registration ₹5,999 including GST · March 2027</small>
+                <aside class="ambassador-spotlight" aria-label="KACL proud ambassador and Grand Season 4 team owner">
+                    <div class="ambassador-picture" role="img" aria-label="KACL proud ambassador wearing a cricket jersey"></div>
+                    <div class="ambassador-copy">
+                        <span class="ambassador-kicker"><span class="ambassador-dot"></span> GRAND SEASON 4 SPOTLIGHT</span>
+                        <strong>KACL PROUD<br><em>AMBASSADOR</em></strong>
+                        <span class="ambassador-divider"></span>
+                        <p>&amp; KACL Grand Season 4 <b>Team Owner</b></p>
+                    </div>
+                </aside>
             </div>
         </section>
         <section class="section" id="rewards">
