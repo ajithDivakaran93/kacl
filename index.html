@@ -1669,7 +1669,7 @@
         .mini .reward-note {
             font-size: 13px !important
         }
-        }
+        
 
         @media(max-width:380px) {
             nav .brand img {
@@ -3526,7 +3526,7 @@
                 justify-self: end !important;
                 width: clamp(360px, 34vw, 540px) !important;
                 max-width: none !important;
-                margin-right: -20px !important;
+                margin-right: calc((min(100vw, 100% + 0px) - 100vw)/2) !important;
                 transform: translateX(max(0px, calc((100vw - 1180px)/2))) !important;
                 border-radius: 14px 0 0 14px !important;
                 border-left: 4px solid #ffce1b !important;
