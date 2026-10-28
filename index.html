@@ -2105,6 +2105,20 @@
  }
  .hero>.hero-content{position:relative!important;z-index:1!important;background:transparent!important}
 }
+
+/* Final mobile hero art direction: tighter portrait framing and a clean dark title area */
+@media(max-width:640px){
+ .hero>.hero-bg{
+  background-image:
+   linear-gradient(90deg,rgba(2,12,27,.94) 0%,rgba(2,12,27,.78) 29%,rgba(2,12,27,.42) 48%,rgba(2,12,27,.04) 85%),
+   linear-gradient(0deg,#031226 0%,rgba(3,18,38,.32) 25%,rgba(3,18,38,.02) 76%),
+   url('assets/kacl-ambassador.png')!important;
+  background-size:100% 100%,100% 100%,auto 112%!important;
+  background-position:center,center,76% top!important;
+  background-repeat:no-repeat!important;
+ }
+ .hero>.hero-content>h1,.hero>.hero-content>h2{text-shadow:0 3px 16px rgba(0,0,0,.7)!important}
+}
 </style>
 </head>
 
