@@ -3484,6 +3484,46 @@
  .hero .sreesanth-role{font-size:12px!important}
  .hero>.hero-content{row-gap:11px!important}
 }
+
+/* Desktop hero – approved reference: cinematic navy, gold, athlete right, compact plaque */
+@media (min-width:921px){
+ .hero{background:#04152b!important;overflow:hidden!important}
+ .hero>.hero-bg{position:absolute!important;inset:0!important;z-index:0!important;
+ background:radial-gradient(ellipse at 77% 37%,#294257 0%,#0a2442 37%,#031329 76%)!important}
+ .hero>.hero-bg::before{content:"";position:absolute;inset:0;opacity:.35;
+ background:radial-gradient(ellipse 26% 16% at 84% 22%,#d5dde1 0%,transparent 100%),
+ radial-gradient(ellipse 38% 24% at 63% 53%,#46627b 0%,transparent 100%),
+ linear-gradient(165deg,transparent 48%,rgba(255,206,27,.2) 49%,transparent 50%);
+ pointer-events:none}
+ .hero>.hero-bg::after{content:"";position:absolute!important;inset:0 0 0 auto!important;width:61%!important;height:100%!important;
+ background-image:linear-gradient(0deg,rgba(3,15,30,.8) 0%,rgba(3,15,30,.05) 48%),linear-gradient(90deg,rgba(3,19,41,.85),rgba(3,19,41,.14) 35%,rgba(3,19,41,.08)),url('assets/kacl-ambassador.png')!important;
+ background-size:100% 100%,100% 100%,auto 116%!important;background-position:center,center,right 27%!important;
+ background-repeat:no-repeat!important;mask-image:linear-gradient(90deg,transparent 0%,#000 21%)!important;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 21%)!important}
+ .hero>.hero-content{z-index:1!important;display:grid!important;
+ grid-template-columns:minmax(0, 1.12fr) minmax(0,.88fr)!important;
+ grid-template-areas:"headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration"!important;
+ min-height:clamp(655px,83vh,840px)!important;padding:88px 0 58px!important;
+ column-gap:10px!important;row-gap:13px!important;align-content:center!important;align-items:center!important}
+ .hero>.hero-content>h1{grid-area:headline!important;max-width:620px!important;font-size:clamp(77px,6.5vw,120px)!important;line-height:.86!important;margin:0!important}
+ .hero>.hero-content>h2{grid-area:tagline!important;max-width:620px!important;font-size:clamp(27px,2.3vw,37px)!important;margin:0 0 7px!important}
+ .hero>.hero-content>.hero-actions{grid-area:buttons!important;max-width:100%!important;width:100%!important;margin:0!important;display:flex!important;flex-wrap:wrap!important;gap:12px!important}
+ .hero>.hero-content>.hero-actions .btn{padding:14px 18px!important;font-size:clamp(11px,.82vw,14px)!important}
+ .hero .sreesanth-banner{grid-area:ambassador!important;justify-self:start!important;align-self:center!important;
+ width:min(100%,440px)!important;max-width:440px!important;margin:0!important;transform:translateX(-12px)!important;
+ padding:16px 20px!important;background:rgba(4,20,42,.88)!important;border-radius:12px!important;
+ border:1px solid rgba(255,206,27,.33)!important;border-left:4px solid #ffce1b!important;
+ box-shadow:0 12px 35px rgba(0,0,0,.35)!important}
+ .hero .sreesanth-banner strong{font-size:clamp(32px,2.65vw,47px)!important}
+ .hero .sreesanth-role{font-size:14px!important}
+ .hero>.hero-content>p{grid-area:summary!important;max-width:730px!important;width:auto!important;margin:17px 0 0!important;font-size:clamp(15px,1.03vw,18px)!important}
+ .hero>.hero-content>small{grid-area:registration!important;max-width:700px!important;margin:0!important}
+}
+@media (min-width:921px) and (max-width:1200px){
+ .hero>.hero-content{padding-left:20px!important;padding-right:20px!important}
+ .hero>.hero-content>h1{font-size:clamp(65px,6vw,85px)!important}
+ .hero .sreesanth-banner{transform:none!important}
+}
 </style>
 </head>
 
