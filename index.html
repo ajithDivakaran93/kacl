@@ -1847,6 +1847,27 @@
 .hero>.ambassador-spotlight .ambassador-copy>strong{font-size:clamp(43px,11vw,58px)!important}
 .hero>.hero-content{padding-top:38px!important;padding-bottom:46px!important}
 }
+
+/* Restore the original Beyond the Game player framing on its own row.
+   The former hero background covered both stacked rows and cropped the player. */
+.hero>.hero-bg,.hero::before{display:none!important}
+.hero>.hero-content{
+ min-height:680px!important;
+ justify-content:center!important;
+ background-image:linear-gradient(90deg,#04142eee 0%,#04142ed9 34%,#04142e63 64%,#04142e10 100%),linear-gradient(0deg,#031126bb,transparent 36%),url('assets/hero.jpg')!important;
+ background-size:cover!important;
+ background-position:center,center,center center!important;
+ background-repeat:no-repeat!important;
+}
+@media(max-width:640px){
+ .hero>.hero-content{
+  min-height:705px!important;
+  justify-content:center!important;
+  background-image:linear-gradient(180deg,#04142e15 0%,#04142e85 42%,#04142eeb 82%),url('assets/hero.jpg')!important;
+  background-size:cover!important;
+  background-position:center,90% top!important;
+ }
+}
 </style>
 </head>
 
