@@ -1738,399 +1738,1630 @@
                 margin-left: 3px
             }
         }
-    
-/* Header registration: compact button and subtle animated text */
-.navlinks .btn.header-register{gap:0;padding:12px 17px;min-height:42px;white-space:nowrap;box-shadow:0 3px 16px rgba(255,208,45,.16)}
-.header-register .register-label{display:inline-block;animation:register-emphasis 1.65s ease-in-out infinite;transform-origin:center;will-change:transform,filter}
-@keyframes register-emphasis{0%,100%{transform:scale(1);filter:brightness(1)}30%{transform:scale(1.13);filter:brightness(1.25)}55%{transform:scale(1);filter:brightness(1)}70%{transform:scale(1.07);filter:brightness(1.15)}}
-.navlinks .btn.header-register{animation:register-glow 1.65s ease-in-out infinite}
-@keyframes register-glow{0%,100%{box-shadow:0 3px 14px rgba(255,208,45,.17)}35%{box-shadow:0 4px 23px rgba(255,208,45,.53)}}
-@media(prefers-reduced-motion:reduce){.navlinks .btn.header-register{animation:none}}
-@media(max-width:640px){.navlinks .btn.header-register{min-height:39px;padding:10px 11px;font-size:10px;letter-spacing:.025em}}
-@media(max-width:380px){.navlinks .btn.header-register{padding:9px 8px;font-size:9px}}
-@media(prefers-reduced-motion:reduce){.header-register .register-label{animation:none}}
 
-/* Happiness Index information dialog */
-.happiness-trigger{cursor:pointer;appearance:none;-webkit-appearance:none;border:0;font:inherit}
-.header-happiness-trigger{display:flex;align-items:center;justify-content:center;background:transparent;padding:0;margin-left:14px;flex-shrink:1}
-.header-happiness-trigger .header-happiness-logo{margin-left:0}
-.happiness-trigger:focus-visible,.happiness-close:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-.happiness-tile.happiness-trigger{width:100%;color:inherit}
-.happiness-trigger img{transition:transform .22s ease}
-@media(hover:hover){.happiness-trigger:hover img{transform:scale(1.045)}}
-.happiness-dialog{border:1px solid #345977;border-radius:16px;padding:0;width:min(680px,calc(100% - 30px));max-height:min(88dvh,870px);background:#061b35;color:#edf5ff;box-shadow:0 24px 90px #000b;overflow:auto;overscroll-behavior:contain}
-.happiness-dialog::backdrop{background:rgba(0,8,20,.82);backdrop-filter:blur(5px)}
-.happiness-dialog-header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:10px 18px;background:#092340;border-bottom:1px solid #284969}
-.happiness-dialog-header img{width:85px;height:51px;object-fit:contain;background:#fff;border-radius:5px;padding:4px}
-.happiness-close{display:grid;place-items:center;width:42px;height:42px;cursor:pointer;border-radius:50%;border:1px solid #52718a;background:#183b59;color:#fff;font-size:27px;line-height:1}
-.happiness-dialog-content{padding:26px 30px 34px}
-.happiness-dialog-content h2{font:900 clamp(37px,7vw,55px)/1 'Barlow Condensed',sans-serif;margin:0 0 12px;color:var(--gold);text-transform:uppercase}
-.happiness-subtitle{color:var(--teal)!important;font-weight:800;font-size:16px!important;line-height:1.45!important}
-.happiness-dialog-content p{font-size:14px;line-height:1.75;color:#d0dded;margin:0 0 15px}
-.happiness-dialog-content h3{font:800 30px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:28px 0 16px;color:#fff}
-.happiness-steps{display:grid;gap:10px}
-.happiness-steps section{display:flex;gap:14px;padding:17px;background:#0c2b4d;border:1px solid #244c6b;border-radius:9px}
-.happiness-steps section>span{color:var(--gold);font:900 29px 'Barlow Condensed',sans-serif;line-height:1}
-.happiness-steps h4{font:800 23px 'Barlow Condensed',sans-serif;color:#fff;margin:0 0 7px}
-.happiness-steps p{margin-bottom:0}
-.happiness-final{font-weight:900!important;color:var(--gold)!important;font-size:17px!important}
-@media(max-width:920px){.header-happiness-trigger{margin-left:10px}}
-@media(max-width:640px){.header-happiness-trigger{margin-left:5px}.happiness-dialog{max-height:90dvh;width:calc(100% - 18px);border-radius:12px}.happiness-dialog-content{padding:21px 18px 27px}.happiness-steps section{padding:14px;gap:10px}.happiness-dialog-content h3{margin-top:23px}.happiness-subtitle{font-size:15px!important}}
-@media(max-width:380px){.header-happiness-trigger{margin-left:3px}}
-@media(prefers-reduced-motion:reduce){.happiness-trigger img{transition:none}}
+        /* Header registration: compact button and subtle animated text */
+        .navlinks .btn.header-register {
+            gap: 0;
+            padding: 12px 17px;
+            min-height: 42px;
+            white-space: nowrap;
+            box-shadow: 0 3px 16px rgba(255, 208, 45, .16)
+        }
 
-/* Homepage ambassador spotlight: cinematic portrait with premium gold credentials */
-.hero .hero-content{position:relative}
-.ambassador-spotlight{position:absolute;right:0;top:50%;transform:translateY(-43%);width:clamp(225px,29vw,380px);height:clamp(330px,39vw,480px);z-index:3;border:1px solid rgba(255,207,54,.55);border-radius:17px;overflow:hidden;background:#07223c;box-shadow:0 20px 65px #000a,0 0 0 5px #ffffff0a;isolation:isolate;animation:ambassador-enter .8s ease both}
-.ambassador-picture{position:absolute;inset:0;background:linear-gradient(180deg,transparent 15%,#061b3450 48%,#031327 97%),url('assets/kacl-ambassador.png') center 18%/cover no-repeat;z-index:-1}
-.ambassador-copy{position:absolute;bottom:0;left:0;right:0;padding:40px 22px 23px;background:linear-gradient(0deg,#041326 10%,#051a2be0 60%,transparent);text-align:left}
-.ambassador-kicker{display:flex;align-items:center;gap:7px;font-size:9px;font-weight:900;letter-spacing:.16em;color:#cbd9e4;margin-bottom:7px}
-.ambassador-dot{height:6px;width:6px;background:#ffcc23;border-radius:50%;box-shadow:0 0 12px #ffcc23}
-.ambassador-copy>strong{display:block;font:900 clamp(27px,3.2vw,44px)/.94 'Barlow Condensed',sans-serif;color:#fff;letter-spacing:.014em}
-.ambassador-copy>strong em{font-style:normal;color:#ffce1b}
-.ambassador-divider{display:block;width:46px;height:3px;background:#ffce1b;margin:11px 0}
-.hero .ambassador-copy p{font-size:clamp(12px,1.25vw,15px);line-height:1.4;color:#e4effb;margin:0;max-width:none}
-.ambassador-copy p b{color:#fff}
-@keyframes ambassador-enter{from{opacity:0;transform:translate(25px,-40%)}to{opacity:1;transform:translate(0,-43%)}}
-@media(min-width:921px){.hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:60%}.hero .hero-actions{flex-wrap:wrap}}
-@media(min-width:641px) and (max-width:920px){.ambassador-spotlight{right:0;width:255px;height:365px}.hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:62%}}
-@media(max-width:640px){
-.hero .hero-content{display:flex;flex-direction:column}
-.hero .ambassador-spotlight{position:relative;top:auto;right:auto;transform:none;order:5;width:100%;height:310px;margin:20px auto 5px;max-width:390px;animation:ambassador-mobile-enter .7s ease both}
-.hero .ambassador-picture{background-position:center 27%;background-size:cover}
-.hero .ambassador-copy{padding:35px 18px 19px}
-.hero .ambassador-copy>strong{font-size:34px}
-.hero .ambassador-copy p{font-size:13px}
-.hero .hero-content{padding-bottom:28px}
-}
-@keyframes ambassador-mobile-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.ambassador-spotlight{animation:none}}
+        .header-register .register-label {
+            display: inline-block;
+            animation: register-emphasis 1.65s ease-in-out infinite;
+            transform-origin: center;
+            will-change: transform, filter
+        }
 
-/* Hero redesign: the ambassador is the star of the first mobile viewport */
-@media (min-width:921px){
- .hero .ambassador-spotlight{right:1.5%;width:clamp(350px,34vw,470px);height:clamp(475px,47vw,610px);border:0;border-radius:22px;box-shadow:0 24px 72px rgba(0,0,0,.45),0 0 0 1px rgba(255,211,63,.45)}
- .hero .ambassador-picture{background-position:center 25%}
- .hero .ambassador-copy{padding:95px 30px 28px}
- .hero .ambassador-copy>strong{font-size:clamp(44px,4.2vw,61px)}
- .hero-content>h1,.hero-content>h2,.hero-content>p,.hero-content>.hero-actions,.hero-content>small{max-width:56%}
-}
-@media(max-width:640px){
- .hero{min-height:0!important;height:auto!important;overflow:hidden}
- .hero .hero-content{padding-top:97px!important;padding-bottom:36px!important;display:flex;flex-direction:column;align-items:stretch;gap:0}
- .hero .ambassador-spotlight{order:-1!important;position:relative!important;top:auto!important;right:auto!important;transform:none!important;display:block;width:calc(100% + 32px)!important;max-width:none!important;margin:0 -16px 22px!important;height:clamp(355px,57svh,490px)!important;border-radius:0 0 22px 22px!important;border:0!important;border-bottom:3px solid #ffce1b!important;box-shadow:0 19px 45px #0009;animation:ambassador-mobile-enter .6s ease both}
- .hero .ambassador-picture{background-position:center 24%!important;background-size:cover!important}
- .hero .ambassador-copy{padding:70px 22px 20px;background:linear-gradient(0deg,#041326 5%,#041326ee 40%,#04132600 100%)}
- .hero .ambassador-kicker{font-size:10px;letter-spacing:.14em;margin-bottom:8px}
- .hero .ambassador-copy>strong{font-size:clamp(43px,12vw,58px)!important;line-height:.89;letter-spacing:.008em;text-shadow:0 4px 14px #000b}
- .hero .ambassador-divider{margin:10px 0 9px}
- .hero .ambassador-copy p{font-size:14px!important;line-height:1.3!important;max-width:100%}
- .hero .hero-content>h1{order:0!important;font-size:clamp(49px,12vw,72px)!important;line-height:.9!important;margin:0 0 7px!important}
- .hero .hero-content>h2{order:1!important;margin:0 0 10px!important}
- .hero .hero-content>p{order:2!important;margin:0 0 15px!important}
- .hero .hero-actions{order:3!important;margin-top:0!important}
- .hero .hero-content>small{order:4!important;margin-top:9px!important}
-}
-@media(max-width:380px){.hero .hero-content{padding-top:93px!important}.hero .ambassador-spotlight{height:350px!important}}
+        @keyframes register-emphasis {
 
-/* Ambassador: dedicated first row, hero tagline below it on every viewport */
-.hero{height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden}
-.hero>.ambassador-spotlight{position:relative!important;order:0!important;inset:auto!important;top:auto!important;right:auto!important;left:auto!important;transform:none!important;animation:none!important;width:100%!important;max-width:none!important;height:clamp(410px,67vh,680px)!important;margin:0!important;border:0!important;border-radius:0!important;border-bottom:3px solid #ffce1b!important;box-shadow:none!important;z-index:2}
-.hero>.ambassador-spotlight .ambassador-picture{background-position:center 30%!important;background-size:cover!important}
-.hero>.ambassador-spotlight .ambassador-copy{left:max(22px,calc((100vw - 1180px)/2))!important;right:auto!important;bottom:25px!important;max-width:min(560px,90vw);padding:50px 18px 14px!important;background:linear-gradient(90deg,#041326d9,#04132685 65%,transparent)!important}
-.hero>.ambassador-spotlight .ambassador-copy>strong{font-size:clamp(48px,6vw,76px)!important}
-.hero>.hero-content{position:relative!important;order:1!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;width:100%!important;padding-top:64px!important;padding-bottom:72px!important}
-.hero>.hero-content>h1,.hero>.hero-content>h2,.hero>.hero-content>p,.hero>.hero-content>.hero-actions,.hero>.hero-content>small{max-width:850px!important}
-@media(max-width:640px){
-.hero>.ambassador-spotlight{height:clamp(385px,62svh,550px)!important;margin:0!important;border-radius:0!important}
-.hero>.ambassador-spotlight .ambassador-picture{background-position:center 23%!important}
-.hero>.ambassador-spotlight .ambassador-copy{left:0!important;right:0!important;bottom:0!important;max-width:none!important;padding:80px 21px 22px!important;background:linear-gradient(0deg,#041326 0%,#041326df 40%,transparent 100%)!important}
-.hero>.ambassador-spotlight .ambassador-copy>strong{font-size:clamp(43px,11vw,58px)!important}
-.hero>.hero-content{padding-top:38px!important;padding-bottom:46px!important}
-}
+            0%,
+            100% {
+                transform: scale(1);
+                filter: brightness(1)
+            }
 
-/* Restore the original Beyond the Game player framing on its own row.
+            30% {
+                transform: scale(1.13);
+                filter: brightness(1.25)
+            }
+
+            55% {
+                transform: scale(1);
+                filter: brightness(1)
+            }
+
+            70% {
+                transform: scale(1.07);
+                filter: brightness(1.15)
+            }
+        }
+
+        .navlinks .btn.header-register {
+            animation: register-glow 1.65s ease-in-out infinite
+        }
+
+        @keyframes register-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 3px 14px rgba(255, 208, 45, .17)
+            }
+
+            35% {
+                box-shadow: 0 4px 23px rgba(255, 208, 45, .53)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .navlinks .btn.header-register {
+                animation: none
+            }
+        }
+
+        @media(max-width:640px) {
+            .navlinks .btn.header-register {
+                min-height: 39px;
+                padding: 10px 11px;
+                font-size: 10px;
+                letter-spacing: .025em
+            }
+        }
+
+        @media(max-width:380px) {
+            .navlinks .btn.header-register {
+                padding: 9px 8px;
+                font-size: 9px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .header-register .register-label {
+                animation: none
+            }
+        }
+
+        /* Happiness Index information dialog */
+        .happiness-trigger {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            font: inherit
+        }
+
+        .header-happiness-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            padding: 0;
+            margin-left: 14px;
+            flex-shrink: 1
+        }
+
+        .header-happiness-trigger .header-happiness-logo {
+            margin-left: 0
+        }
+
+        .happiness-trigger:focus-visible,
+        .happiness-close:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px
+        }
+
+        .happiness-tile.happiness-trigger {
+            width: 100%;
+            color: inherit
+        }
+
+        .happiness-trigger img {
+            transition: transform .22s ease
+        }
+
+        @media(hover:hover) {
+            .happiness-trigger:hover img {
+                transform: scale(1.045)
+            }
+        }
+
+        .happiness-dialog {
+            border: 1px solid #345977;
+            border-radius: 16px;
+            padding: 0;
+            width: min(680px, calc(100% - 30px));
+            max-height: min(88dvh, 870px);
+            background: #061b35;
+            color: #edf5ff;
+            box-shadow: 0 24px 90px #000b;
+            overflow: auto;
+            overscroll-behavior: contain
+        }
+
+        .happiness-dialog::backdrop {
+            background: rgba(0, 8, 20, .82);
+            backdrop-filter: blur(5px)
+        }
+
+        .happiness-dialog-header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 18px;
+            background: #092340;
+            border-bottom: 1px solid #284969
+        }
+
+        .happiness-dialog-header img {
+            width: 85px;
+            height: 51px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 5px;
+            padding: 4px
+        }
+
+        .happiness-close {
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid #52718a;
+            background: #183b59;
+            color: #fff;
+            font-size: 27px;
+            line-height: 1
+        }
+
+        .happiness-dialog-content {
+            padding: 26px 30px 34px
+        }
+
+        .happiness-dialog-content h2 {
+            font: 900 clamp(37px, 7vw, 55px)/1 'Barlow Condensed', sans-serif;
+            margin: 0 0 12px;
+            color: var(--gold);
+            text-transform: uppercase
+        }
+
+        .happiness-subtitle {
+            color: var(--teal) !important;
+            font-weight: 800;
+            font-size: 16px !important;
+            line-height: 1.45 !important
+        }
+
+        .happiness-dialog-content p {
+            font-size: 14px;
+            line-height: 1.75;
+            color: #d0dded;
+            margin: 0 0 15px
+        }
+
+        .happiness-dialog-content h3 {
+            font: 800 30px 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            margin: 28px 0 16px;
+            color: #fff
+        }
+
+        .happiness-steps {
+            display: grid;
+            gap: 10px
+        }
+
+        .happiness-steps section {
+            display: flex;
+            gap: 14px;
+            padding: 17px;
+            background: #0c2b4d;
+            border: 1px solid #244c6b;
+            border-radius: 9px
+        }
+
+        .happiness-steps section>span {
+            color: var(--gold);
+            font: 900 29px 'Barlow Condensed', sans-serif;
+            line-height: 1
+        }
+
+        .happiness-steps h4 {
+            font: 800 23px 'Barlow Condensed', sans-serif;
+            color: #fff;
+            margin: 0 0 7px
+        }
+
+        .happiness-steps p {
+            margin-bottom: 0
+        }
+
+        .happiness-final {
+            font-weight: 900 !important;
+            color: var(--gold) !important;
+            font-size: 17px !important
+        }
+
+        @media(max-width:920px) {
+            .header-happiness-trigger {
+                margin-left: 10px
+            }
+        }
+
+        @media(max-width:640px) {
+            .header-happiness-trigger {
+                margin-left: 5px
+            }
+
+            .happiness-dialog {
+                max-height: 90dvh;
+                width: calc(100% - 18px);
+                border-radius: 12px
+            }
+
+            .happiness-dialog-content {
+                padding: 21px 18px 27px
+            }
+
+            .happiness-steps section {
+                padding: 14px;
+                gap: 10px
+            }
+
+            .happiness-dialog-content h3 {
+                margin-top: 23px
+            }
+
+            .happiness-subtitle {
+                font-size: 15px !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .header-happiness-trigger {
+                margin-left: 3px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .happiness-trigger img {
+                transition: none
+            }
+        }
+
+        /* Homepage ambassador spotlight: cinematic portrait with premium gold credentials */
+        .hero .hero-content {
+            position: relative
+        }
+
+        .ambassador-spotlight {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-43%);
+            width: clamp(225px, 29vw, 380px);
+            height: clamp(330px, 39vw, 480px);
+            z-index: 3;
+            border: 1px solid rgba(255, 207, 54, .55);
+            border-radius: 17px;
+            overflow: hidden;
+            background: #07223c;
+            box-shadow: 0 20px 65px #000a, 0 0 0 5px #ffffff0a;
+            isolation: isolate;
+            animation: ambassador-enter .8s ease both
+        }
+
+        .ambassador-picture {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 15%, #061b3450 48%, #031327 97%), url('assets/kacl-ambassador.png') center 18%/cover no-repeat;
+            z-index: -1
+        }
+
+        .ambassador-copy {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 22px 23px;
+            background: linear-gradient(0deg, #041326 10%, #051a2be0 60%, transparent);
+            text-align: left
+        }
+
+        .ambassador-kicker {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: .16em;
+            color: #cbd9e4;
+            margin-bottom: 7px
+        }
+
+        .ambassador-dot {
+            height: 6px;
+            width: 6px;
+            background: #ffcc23;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #ffcc23
+        }
+
+        .ambassador-copy>strong {
+            display: block;
+            font: 900 clamp(27px, 3.2vw, 44px)/.94 'Barlow Condensed', sans-serif;
+            color: #fff;
+            letter-spacing: .014em
+        }
+
+        .ambassador-copy>strong em {
+            font-style: normal;
+            color: #ffce1b
+        }
+
+        .ambassador-divider {
+            display: block;
+            width: 46px;
+            height: 3px;
+            background: #ffce1b;
+            margin: 11px 0
+        }
+
+        .hero .ambassador-copy p {
+            font-size: clamp(12px, 1.25vw, 15px);
+            line-height: 1.4;
+            color: #e4effb;
+            margin: 0;
+            max-width: none
+        }
+
+        .ambassador-copy p b {
+            color: #fff
+        }
+
+        @keyframes ambassador-enter {
+            from {
+                opacity: 0;
+                transform: translate(25px, -40%)
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, -43%)
+            }
+        }
+
+        @media(min-width:921px) {
+
+            .hero-content>h1,
+            .hero-content>h2,
+            .hero-content>p,
+            .hero-content>.hero-actions,
+            .hero-content>small {
+                max-width: 60%
+            }
+
+            .hero .hero-actions {
+                flex-wrap: wrap
+            }
+        }
+
+        @media(min-width:641px) and (max-width:920px) {
+            .ambassador-spotlight {
+                right: 0;
+                width: 255px;
+                height: 365px
+            }
+
+            .hero-content>h1,
+            .hero-content>h2,
+            .hero-content>p,
+            .hero-content>.hero-actions,
+            .hero-content>small {
+                max-width: 62%
+            }
+        }
+
+        @media(max-width:640px) {
+            .hero .hero-content {
+                display: flex;
+                flex-direction: column
+            }
+
+            .hero .ambassador-spotlight {
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: none;
+                order: 5;
+                width: 100%;
+                height: 310px;
+                margin: 20px auto 5px;
+                max-width: 390px;
+                animation: ambassador-mobile-enter .7s ease both
+            }
+
+            .hero .ambassador-picture {
+                background-position: center 27%;
+                background-size: cover
+            }
+
+            .hero .ambassador-copy {
+                padding: 35px 18px 19px
+            }
+
+            .hero .ambassador-copy>strong {
+                font-size: 34px
+            }
+
+            .hero .ambassador-copy p {
+                font-size: 13px
+            }
+
+            .hero .hero-content {
+                padding-bottom: 28px
+            }
+        }
+
+        @keyframes ambassador-mobile-enter {
+            from {
+                opacity: 0;
+                transform: translateY(15px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .ambassador-spotlight {
+                animation: none
+            }
+        }
+
+        /* Hero redesign: the ambassador is the star of the first mobile viewport */
+        @media (min-width:921px) {
+            .hero .ambassador-spotlight {
+                right: 1.5%;
+                width: clamp(350px, 34vw, 470px);
+                height: clamp(475px, 47vw, 610px);
+                border: 0;
+                border-radius: 22px;
+                box-shadow: 0 24px 72px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 211, 63, .45)
+            }
+
+            .hero .ambassador-picture {
+                background-position: center 25%
+            }
+
+            .hero .ambassador-copy {
+                padding: 95px 30px 28px
+            }
+
+            .hero .ambassador-copy>strong {
+                font-size: clamp(44px, 4.2vw, 61px)
+            }
+
+            .hero-content>h1,
+            .hero-content>h2,
+            .hero-content>p,
+            .hero-content>.hero-actions,
+            .hero-content>small {
+                max-width: 56%
+            }
+        }
+
+        @media(max-width:640px) {
+            .hero {
+                min-height: 0 !important;
+                height: auto !important;
+                overflow: hidden
+            }
+
+            .hero .hero-content {
+                padding-top: 97px !important;
+                padding-bottom: 36px !important;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0
+            }
+
+            .hero .ambassador-spotlight {
+                order: -1 !important;
+                position: relative !important;
+                top: auto !important;
+                right: auto !important;
+                transform: none !important;
+                display: block;
+                width: calc(100% + 32px) !important;
+                max-width: none !important;
+                margin: 0 -16px 22px !important;
+                height: clamp(355px, 57svh, 490px) !important;
+                border-radius: 0 0 22px 22px !important;
+                border: 0 !important;
+                border-bottom: 3px solid #ffce1b !important;
+                box-shadow: 0 19px 45px #0009;
+                animation: ambassador-mobile-enter .6s ease both
+            }
+
+            .hero .ambassador-picture {
+                background-position: center 24% !important;
+                background-size: cover !important
+            }
+
+            .hero .ambassador-copy {
+                padding: 70px 22px 20px;
+                background: linear-gradient(0deg, #041326 5%, #041326ee 40%, #04132600 100%)
+            }
+
+            .hero .ambassador-kicker {
+                font-size: 10px;
+                letter-spacing: .14em;
+                margin-bottom: 8px
+            }
+
+            .hero .ambassador-copy>strong {
+                font-size: clamp(43px, 12vw, 58px) !important;
+                line-height: .89;
+                letter-spacing: .008em;
+                text-shadow: 0 4px 14px #000b
+            }
+
+            .hero .ambassador-divider {
+                margin: 10px 0 9px
+            }
+
+            .hero .ambassador-copy p {
+                font-size: 14px !important;
+                line-height: 1.3 !important;
+                max-width: 100%
+            }
+
+            .hero .hero-content>h1 {
+                order: 0 !important;
+                font-size: clamp(49px, 12vw, 72px) !important;
+                line-height: .9 !important;
+                margin: 0 0 7px !important
+            }
+
+            .hero .hero-content>h2 {
+                order: 1 !important;
+                margin: 0 0 10px !important
+            }
+
+            .hero .hero-content>p {
+                order: 2 !important;
+                margin: 0 0 15px !important
+            }
+
+            .hero .hero-actions {
+                order: 3 !important;
+                margin-top: 0 !important
+            }
+
+            .hero .hero-content>small {
+                order: 4 !important;
+                margin-top: 9px !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero .hero-content {
+                padding-top: 93px !important
+            }
+
+            .hero .ambassador-spotlight {
+                height: 350px !important
+            }
+        }
+
+        /* Ambassador: dedicated first row, hero tagline below it on every viewport */
+        .hero {
+            height: auto !important;
+            min-height: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            overflow: hidden
+        }
+
+        .hero>.ambassador-spotlight {
+            position: relative !important;
+            order: 0 !important;
+            inset: auto !important;
+            top: auto !important;
+            right: auto !important;
+            left: auto !important;
+            transform: none !important;
+            animation: none !important;
+            width: 100% !important;
+            max-width: none !important;
+            height: clamp(410px, 67vh, 680px) !important;
+            margin: 0 !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            border-bottom: 3px solid #ffce1b !important;
+            box-shadow: none !important;
+            z-index: 2
+        }
+
+        .hero>.ambassador-spotlight .ambassador-picture {
+            background-position: center 30% !important;
+            background-size: cover !important
+        }
+
+        .hero>.ambassador-spotlight .ambassador-copy {
+            left: max(22px, calc((100vw - 1180px)/2)) !important;
+            right: auto !important;
+            bottom: 25px !important;
+            max-width: min(560px, 90vw);
+            padding: 50px 18px 14px !important;
+            background: linear-gradient(90deg, #041326d9, #04132685 65%, transparent) !important
+        }
+
+        .hero>.ambassador-spotlight .ambassador-copy>strong {
+            font-size: clamp(48px, 6vw, 76px) !important
+        }
+
+        .hero>.hero-content {
+            position: relative !important;
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0 !important;
+            width: 100% !important;
+            padding-top: 64px !important;
+            padding-bottom: 72px !important
+        }
+
+        .hero>.hero-content>h1,
+        .hero>.hero-content>h2,
+        .hero>.hero-content>p,
+        .hero>.hero-content>.hero-actions,
+        .hero>.hero-content>small {
+            max-width: 850px !important
+        }
+
+        @media(max-width:640px) {
+            .hero>.ambassador-spotlight {
+                height: clamp(385px, 62svh, 550px) !important;
+                margin: 0 !important;
+                border-radius: 0 !important
+            }
+
+            .hero>.ambassador-spotlight .ambassador-picture {
+                background-position: center 23% !important
+            }
+
+            .hero>.ambassador-spotlight .ambassador-copy {
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                max-width: none !important;
+                padding: 80px 21px 22px !important;
+                background: linear-gradient(0deg, #041326 0%, #041326df 40%, transparent 100%) !important
+            }
+
+            .hero>.ambassador-spotlight .ambassador-copy>strong {
+                font-size: clamp(43px, 11vw, 58px) !important
+            }
+
+            .hero>.hero-content {
+                padding-top: 38px !important;
+                padding-bottom: 46px !important
+            }
+        }
+
+        /* Restore the original Beyond the Game player framing on its own row.
    The former hero background covered both stacked rows and cropped the player. */
-.hero>.hero-bg,.hero::before{display:none!important}
-.hero>.hero-content{
- min-height:560px!important;
- justify-content:center!important;
- padding-top:55px!important;
- padding-bottom:42px!important;
- background-image:linear-gradient(90deg,#04142eee 0%,#04142ed9 34%,#04142e63 64%,#04142e10 100%),linear-gradient(0deg,#031126bb,transparent 36%),url('assets/hero.jpg')!important;
- background-size:cover!important;
- background-position:center,center,center center!important;
- background-repeat:no-repeat!important;
-}
-@media(max-width:640px){
- .hero>.hero-content{
-  min-height:570px!important;
-  justify-content:flex-start!important;
-  padding-top:42px!important;
-  padding-bottom:35px!important;
-  background-image:linear-gradient(180deg,#04142e15 0%,#04142e85 42%,#04142eeb 82%),url('assets/hero.jpg')!important;
-  background-size:cover!important;
-  background-position:center,90% top!important;
- }
-}
+        .hero>.hero-bg,
+        .hero::before {
+            display: none !important
+        }
 
-/* One-piece ambassador hero: full-bleed image and translucent title panel */
-.hero{position:relative!important;display:block!important;min-height:0!important;height:auto!important;background:#041329!important;isolation:isolate}
-.hero>.hero-bg{display:block!important;z-index:-2!important;inset:0!important;opacity:1!important;background-image:linear-gradient(90deg,rgba(2,13,30,.97) 0%,rgba(2,13,30,.86) 32%,rgba(2,13,30,.24) 73%,rgba(2,13,30,.04)),linear-gradient(0deg,rgba(2,13,30,.80),transparent 37%),url('assets/kacl-ambassador.png')!important;background-size:cover!important;background-position:center,center,center 25%!important}
-.hero::before{display:none!important}
-.hero>.hero-content{position:relative!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;min-height:clamp(620px,78vh,850px)!important;padding-top:115px!important;padding-bottom:70px!important;background:none!important}
-.hero>.hero-content>h1,.hero>.hero-content>h2,.hero>.hero-content>p,.hero>.hero-content>.hero-actions,.hero>.hero-content>small{max-width:min(560px,54%)!important}
-.sreesanth-banner{display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:495px;margin:0 0 26px;padding:19px 25px 19px 22px;color:white;background:linear-gradient(110deg,rgba(4,22,44,.84),rgba(4,22,44,.44));border:1px solid rgba(255,210,71,.44);border-left:4px solid #ffce1b;border-radius:0 14px 14px 0;box-shadow:0 12px 34px rgba(0,0,0,.2);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px)}
-.sreesanth-intro{font-size:10px;font-weight:850;letter-spacing:.19em;color:#ffce1b}
-.sreesanth-banner strong{font:900 clamp(36px,4.8vw,64px)/.98 'Barlow Condensed',sans-serif;letter-spacing:.018em;text-transform:uppercase}
-.sreesanth-role{font-size:14px;font-weight:700;line-height:1.45;color:#f3f6ff}
-@media(max-width:920px) and (min-width:641px){.hero>.hero-bg{background-position:center,center,58% center!important}.hero>.hero-content{min-height:695px!important}.hero>.hero-content>h1,.hero>.hero-content>h2,.hero>.hero-content>p,.hero>.hero-content>.hero-actions,.hero>.hero-content>small{max-width:57%!important}.sreesanth-banner{max-width:55%;padding:16px}}
-@media(max-width:640px){
-.hero>.hero-bg{background-image:linear-gradient(180deg,rgba(2,12,27,.05) 2%,rgba(2,12,27,.18) 27%,rgba(2,12,27,.82) 49%,#031226 83%),url('assets/kacl-ambassador.png')!important;background-position:center,center top!important;background-size:cover!important}
-.hero>.hero-content{min-height:0!important;padding-top:clamp(315px,49svh,445px)!important;padding-bottom:43px!important;display:flex!important;align-items:stretch!important;justify-content:flex-start!important}
-.hero .sreesanth-banner{order:0!important;max-width:100%;margin:0 0 23px!important;padding:14px 17px!important;gap:3px;background:linear-gradient(120deg,rgba(4,21,42,.82),rgba(8,31,54,.52));border-radius:0 10px 10px 0}
-.sreesanth-banner strong{font-size:clamp(38px,11vw,54px)}
-.sreesanth-role{font-size:12px}
-.hero>.hero-content>h1{order:1!important;font-size:clamp(47px,12vw,70px)!important;line-height:.93!important;margin:0 0 9px!important;max-width:100%!important}
-.hero>.hero-content>h2{order:2!important;margin:0 0 12px!important;max-width:100%!important}
-.hero>.hero-content>p{order:3!important;max-width:100%!important;margin:0 0 16px!important}
-.hero>.hero-content>.hero-actions{order:4!important;max-width:100%!important}
-.hero>.hero-content>small{order:5!important;max-width:100%!important}
-}
-@media(max-width:380px){.hero>.hero-content{padding-top:310px!important}.sreesanth-role{font-size:11px}}
+        .hero>.hero-content {
+            min-height: 560px !important;
+            justify-content: center !important;
+            padding-top: 55px !important;
+            padding-bottom: 42px !important;
+            background-image: linear-gradient(90deg, #04142eee 0%, #04142ed9 34%, #04142e63 64%, #04142e10 100%), linear-gradient(0deg, #031126bb, transparent 36%), url('assets/hero.jpg') !important;
+            background-size: cover !important;
+            background-position: center, center, center center !important;
+            background-repeat: no-repeat !important;
+        }
 
-/* Mobile hero composition: keep Sreesanth's full face unobstructed and content below portrait */
-@media(max-width:640px){
- .hero{display:block!important;background:#031226!important;overflow:hidden!important}
- .hero>.hero-bg{
-  display:block!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:auto!important;
-  height:clamp(345px,103vw,455px)!important;width:100%!important;opacity:1!important;
-  background-image:linear-gradient(180deg,rgba(3,18,38,0) 0%,rgba(3,18,38,0) 66%,rgba(3,18,38,.18) 82%,#031226 100%),url('assets/kacl-ambassador.png')!important;
-  background-size:cover!important;background-position:center,center 32%!important;background-repeat:no-repeat!important;
-  z-index:-1!important;
- }
- .hero>.hero-content{
-  position:relative!important;z-index:1!important;display:flex!important;flex-direction:column!important;
-  min-height:0!important;width:100%!important;
-  padding-top:clamp(355px,105vw,465px)!important;padding-bottom:36px!important;
-  gap:0!important;align-items:stretch!important;justify-content:flex-start!important;
-  background:none!important;
- }
- .hero .sreesanth-banner{
-  position:relative!important;order:0!important;margin:0 0 25px!important;
-  max-width:100%!important;padding:15px 17px!important;
-  background:linear-gradient(120deg,#112b49,#07192d)!important;
-  border:1px solid rgba(255,206,27,.4)!important;border-left:4px solid #ffce1b!important;
-  border-radius:0 12px 12px 0!important;box-shadow:0 8px 24px #0005!important;
-  backdrop-filter:none!important;
- }
- .hero .sreesanth-banner strong{font-size:clamp(38px,10.3vw,51px)!important;line-height:1!important}
- .hero .sreesanth-intro{font-size:10px!important}
- .hero .sreesanth-role{font-size:12px!important;line-height:1.45!important}
- .hero>.hero-content>h1{font-size:clamp(46px,11.5vw,66px)!important;line-height:.92!important;order:1!important;margin:0 0 8px!important}
- .hero>.hero-content>h2{order:2!important;margin:0 0 12px!important}
- .hero>.hero-content>p{order:3!important;margin:0 0 17px!important}
- .hero>.hero-content>.hero-actions{order:4!important}
- .hero>.hero-content>small{order:5!important}
-}
-@media(max-width:380px){
- .hero>.hero-bg{height:clamp(335px,103vw,405px)!important}
- .hero>.hero-content{padding-top:clamp(345px,105vw,415px)!important}
-}
+        @media(max-width:640px) {
+            .hero>.hero-content {
+                min-height: 570px !important;
+                justify-content: flex-start !important;
+                padding-top: 42px !important;
+                padding-bottom: 35px !important;
+                background-image: linear-gradient(180deg, #04142e15 0%, #04142e85 42%, #04142eeb 82%), url('assets/hero.jpg') !important;
+                background-size: cover !important;
+                background-position: center, 90% top !important;
+            }
+        }
 
-/* Compact split-composition hero: ambassador on right, headline left */
-@media(max-width:640px){
- .hero{position:relative!important;min-height:0!important;background:#031226!important}
- .hero>.hero-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
- background-image:linear-gradient(90deg,rgba(2,13,31,.99) 0%,rgba(2,13,31,.90) 28%,rgba(2,13,31,.43) 57%,rgba(2,13,31,.03) 100%),linear-gradient(0deg,#031226 1%,rgba(3,18,38,.72) 26%,transparent 65%),url('assets/kacl-ambassador.png')!important;
- background-size:cover!important;background-position:center,center,67% top!important;z-index:-1!important}
- .hero>.hero-content{padding:110px 20px 30px!important;min-height:535px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-end!important;gap:0!important;background:none!important}
- .hero>.hero-content>h1{order:0!important;font-size:clamp(34px,9.8vw,48px)!important;line-height:.94!important;max-width:62%!important;margin:0 0 7px!important;text-shadow:0 3px 15px #0008}
- .hero>.hero-content>h2{order:1!important;font-size:clamp(19px,5.2vw,25px)!important;line-height:1.1!important;margin:0 0 16px!important;max-width:65%!important}
- .hero .sreesanth-banner{order:2!important;margin:0 0 15px!important;padding:10px 12px!important;max-width:100%!important;width:100%!important;gap:3px!important;background:rgba(3,18,38,.83)!important;border-left:3px solid #ffce1b!important;box-shadow:0 4px 18px #0005!important;border-radius:0 9px 9px 0!important}
- .hero .sreesanth-intro{font-size:9px!important;letter-spacing:.12em!important}
- .hero .sreesanth-banner strong{font-size:clamp(25px,7vw,32px)!important;line-height:1!important}
- .hero .sreesanth-role{font-size:11px!important;line-height:1.35!important}
- .hero>.hero-content>p{order:3!important;font-size:13px!important;line-height:1.5!important;max-width:100%!important;margin:0 0 12px!important}
- .hero>.hero-content>.hero-actions{order:4!important;max-width:100%!important;gap:9px!important}
- .hero>.hero-content>.hero-actions .btn{font-size:11px!important;padding:11px 13px!important}
- .hero>.hero-content>small{order:5!important;font-size:10px!important;margin-top:10px!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{min-height:510px!important;padding:103px 15px 25px!important}
- .hero>.hero-content>h1{font-size:35px!important}
- .hero>.hero-content>.hero-actions .btn{font-size:10px!important;padding:10px!important}
-}
+        /* One-piece ambassador hero: full-bleed image and translucent title panel */
+        .hero {
+            position: relative !important;
+            display: block !important;
+            min-height: 0 !important;
+            height: auto !important;
+            background: #041329 !important;
+            isolation: isolate
+        }
 
-/* Ambassador and registration share the lead row; Beyond headline moves below */
-@media(max-width:640px){
- .hero{position:relative!important;background:#031226!important;isolation:isolate}
- .hero>.hero-bg{
-  position:absolute!important;inset:0 0 auto!important;height:570px!important;width:100%!important;z-index:-1!important;
-  background-image:linear-gradient(90deg,#031226ed 0%,#031226af 36%,#0312261a 72%),linear-gradient(0deg,#031226 0%,#03122640 31%,transparent 65%),url('assets/kacl-ambassador.png')!important;
-  background-size:cover!important;background-position:center,center,67% top!important;
- }
- .hero>.hero-content{
-  display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;
-  min-height:0!important;padding:315px 18px 36px!important;background:none!important;
- }
- .hero .sreesanth-banner{
-  order:0!important;width:55%!important;max-width:55%!important;
-  margin:0 0 14px!important;padding:10px 9px!important;
-  background:rgba(4,18,37,.76)!important;backdrop-filter:blur(5px);
- }
- .hero .sreesanth-banner strong{font-size:clamp(22px,6vw,30px)!important}
- .hero .sreesanth-intro{font-size:8px!important;letter-spacing:.07em!important}
- .hero .sreesanth-role{font-size:10px!important}
- .hero>.hero-content>.hero-actions{
-  order:1!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;
-  width:55%!important;max-width:55%!important;gap:8px!important;margin:0 0 52px!important
- }
- .hero .hero-actions .btn{width:100%!important;min-height:42px!important;padding:10px 8px!important;font-size:10px!important;justify-content:center!important;text-align:center!important;white-space:normal!important;line-height:1.1!important}
- .hero .hero-actions .cta-arrow{width:13px;height:13px;flex-shrink:0}
- .hero>.hero-content>h1{
-  order:2!important;max-width:100%!important;width:100%!important;
-  font-size:clamp(43px,11.6vw,60px)!important;line-height:.92!important;margin:0 0 10px!important
- }
- .hero>.hero-content>h2{order:3!important;max-width:100%!important;margin:0 0 13px!important}
- .hero>.hero-content>p{order:4!important;max-width:100%!important;font-size:13px!important;margin:0 0 12px!important}
- .hero>.hero-content>small{order:5!important;max-width:100%!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{padding:285px 14px 32px!important}
- .hero>.hero-bg{height:545px!important}
- .hero .sreesanth-banner,.hero>.hero-content>.hero-actions{width:58%!important;max-width:58%!important}
-}
+        .hero>.hero-bg {
+            display: block !important;
+            z-index: -2 !important;
+            inset: 0 !important;
+            opacity: 1 !important;
+            background-image: linear-gradient(90deg, rgba(2, 13, 30, .97) 0%, rgba(2, 13, 30, .86) 32%, rgba(2, 13, 30, .24) 73%, rgba(2, 13, 30, .04)), linear-gradient(0deg, rgba(2, 13, 30, .80), transparent 37%), url('assets/kacl-ambassador.png') !important;
+            background-size: cover !important;
+            background-position: center, center, center 25% !important
+        }
 
-/* Final mobile hero: Beyond headline FIRST, registration alongside, ambassador at right */
-@media(max-width:640px){
- .hero>.hero-bg{height:100%!important;background-image:linear-gradient(90deg,rgba(2,13,31,.96) 0%,rgba(2,13,31,.79) 38%,rgba(2,13,31,.13) 100%),linear-gradient(0deg,#031226 3%,rgba(3,18,38,.34) 52%,transparent 85%),url('assets/kacl-ambassador.png')!important;background-size:cover!important;background-position:center,center,64% top!important}
- .hero>.hero-content{
-   display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,.92fr)!important;
-   grid-template-areas:"headline buttons" "tagline buttons" "ambassador ambassador" "summary summary" "registration registration"!important;
-   column-gap:10px!important;row-gap:10px!important;
-   padding:165px 15px 33px!important;min-height:610px!important;
-   align-content:start!important;align-items:center!important;
- }
- .hero>.hero-content>h1{grid-area:headline!important;order:unset!important;width:auto!important;max-width:100%!important;font-size:clamp(34px,9.3vw,45px)!important;line-height:.94!important;margin:0!important;align-self:end!important}
- .hero>.hero-content>h2{grid-area:tagline!important;order:unset!important;max-width:100%!important;font-size:clamp(15px,4.1vw,20px)!important;margin:0!important;align-self:start!important}
- .hero>.hero-content>.hero-actions{grid-area:buttons!important;order:unset!important;width:100%!important;max-width:100%!important;display:flex!important;flex-direction:column!important;align-self:center!important;margin:0!important;gap:8px!important}
- .hero>.hero-content>.hero-actions .btn{width:100%!important;min-height:47px!important;font-size:clamp(9px,2.3vw,11px)!important;padding:9px 5px!important;white-space:normal!important;line-height:1.25!important;justify-content:center!important;text-align:center!important}
- .hero .hero-actions .cta-arrow{width:13px!important;height:13px!important}
- .hero .sreesanth-banner{grid-area:ambassador!important;order:unset!important;width:100%!important;max-width:100%!important;margin:32px 0 5px!important;padding:12px 14px!important;background:rgba(3,18,38,.81)!important}
- .hero .sreesanth-banner strong{font-size:clamp(27px,7vw,34px)!important}
- .hero>.hero-content>p{grid-area:summary!important;order:unset!important;margin:0!important;max-width:100%!important;font-size:13px!important}
- .hero>.hero-content>small{grid-area:registration!important;order:unset!important;margin:0!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{padding:145px 11px 28px!important;column-gap:7px!important;min-height:590px!important}
- .hero>.hero-content>h1{font-size:33px!important}
- .hero>.hero-content>.hero-actions .btn{font-size:9px!important}
-}
+        .hero::before {
+            display: none !important
+        }
 
-/* Correct mobile layout: headline first, then buttons LEFT and ambassador RIGHT */
-@media(max-width:640px){
- .hero>.hero-bg{height:100%!important;background-image:linear-gradient(90deg,rgba(2,13,31,.96) 0%,rgba(2,13,31,.70) 40%,rgba(2,13,31,.1) 100%),linear-gradient(0deg,#031226 0%,rgba(3,18,38,.25) 55%,transparent 92%),url('assets/kacl-ambassador.png')!important;background-size:cover!important;background-position:center,center,68% top!important}
- .hero>.hero-content{
-  display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
-  grid-template-areas:"headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration"!important;
-  column-gap:12px!important;row-gap:9px!important;align-items:center!important;
-  padding:122px 16px 33px!important;min-height:590px!important;align-content:start!important;
- }
- .hero>.hero-content>h1{grid-area:headline!important;font-size:clamp(40px,11vw,59px)!important;max-width:100%!important;margin:0!important}
- .hero>.hero-content>h2{grid-area:tagline!important;font-size:clamp(20px,5vw,27px)!important;max-width:100%!important;margin:0 0 24px!important}
- .hero>.hero-content>.hero-actions{
-  grid-area:buttons!important;display:flex!important;flex-direction:column!important;
-  width:100%!important;max-width:100%!important;margin:0!important;gap:10px!important;align-self:end!important;
- }
- .hero>.hero-content>.hero-actions .btn{width:100%!important;min-height:48px!important;padding:10px 7px!important;font-size:clamp(10px,2.5vw,12px)!important;line-height:1.25!important;text-align:center!important;justify-content:center!important;white-space:normal!important}
- .hero .sreesanth-banner{
-  grid-area:ambassador!important;width:100%!important;max-width:100%!important;
-  align-self:end!important;margin:0!important;padding:10px!important;
-  background:rgba(3,18,38,.72)!important;border-left:3px solid #ffce1b!important;
- }
- .hero .sreesanth-banner strong{font-size:clamp(23px,6vw,32px)!important}
- .hero .sreesanth-intro{font-size:8px!important;letter-spacing:.05em!important}
- .hero .sreesanth-role{font-size:10px!important;line-height:1.35!important}
- .hero>.hero-content>p{grid-area:summary!important;max-width:100%!important;margin:30px 0 4px!important;font-size:13px!important}
- .hero>.hero-content>small{grid-area:registration!important;max-width:100%!important;margin:0!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{padding:105px 12px 28px!important;column-gap:8px!important}
- .hero>.hero-content>h1{font-size:39px!important}
- .hero>.hero-content>h2{font-size:19px!important}
- .hero>.hero-content>.hero-actions .btn{font-size:9px!important}
- .hero .sreesanth-banner strong{font-size:23px!important}
-}
+        .hero>.hero-content {
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: center !important;
+            min-height: clamp(620px, 78vh, 850px) !important;
+            padding-top: 115px !important;
+            padding-bottom: 70px !important;
+            background: none !important
+        }
 
-/* Final mobile spacing: bring the hero copy lower and remove dead space below */
-@media(max-width:640px){
- .hero{min-height:0!important;height:auto!important}
- .hero>.hero-content{
-   min-height:0!important;
-   padding-top:clamp(180px,27svh,260px)!important;
-   padding-bottom:19px!important;
-   align-content:start!important;
- }
- .hero>.hero-content>p{margin-top:19px!important}
- .hero>.hero-content>small{margin-bottom:0!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{padding-top:clamp(160px,24svh,220px)!important;padding-bottom:17px!important}
-}
+        .hero>.hero-content>h1,
+        .hero>.hero-content>h2,
+        .hero>.hero-content>p,
+        .hero>.hero-content>.hero-actions,
+        .hero>.hero-content>small {
+            max-width: min(560px, 54%) !important
+        }
 
-/* Mobile ambassador visibility: give the portrait more uninterrupted space above text */
-@media(max-width:640px){
- .hero>.hero-content{
-  padding-top:clamp(255px,37svh,350px)!important;
-  padding-bottom:17px!important;
-  min-height:0!important;
- }
- .hero>.hero-bg{background-position:center,center,68% top!important}
-}
-@media(max-width:380px){
- .hero>.hero-content{padding-top:clamp(235px,35svh,310px)!important;padding-bottom:15px!important}
-}
+        .sreesanth-banner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            max-width: 495px;
+            margin: 0 0 26px;
+            padding: 19px 25px 19px 22px;
+            color: white;
+            background: linear-gradient(110deg, rgba(4, 22, 44, .84), rgba(4, 22, 44, .44));
+            border: 1px solid rgba(255, 210, 71, .44);
+            border-left: 4px solid #ffce1b;
+            border-radius: 0 14px 14px 0;
+            box-shadow: 0 12px 34px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(11px);
+            -webkit-backdrop-filter: blur(11px)
+        }
 
-/* Fix missing mobile ambassador background: isolate created a negative stacking layer */
-@media(max-width:640px){
- .hero{isolation:isolate!important;position:relative!important;background:#031226!important}
- .hero>.hero-bg{
-   display:block!important;position:absolute!important;inset:0!important;
-   width:100%!important;height:100%!important;
-   z-index:0!important;opacity:1!important;visibility:visible!important;
-   background-image:linear-gradient(90deg,rgba(2,13,31,.75) 0%,rgba(2,13,31,.35) 45%,rgba(2,13,31,.03) 100%),linear-gradient(0deg,#031226 0%,rgba(3,18,38,.08) 65%,transparent 100%),url('assets/kacl-ambassador.png')!important;
-   background-size:cover!important;
-   background-position:center,center,68% top!important;
-   background-repeat:no-repeat!important;
- }
- .hero>.hero-content{position:relative!important;z-index:1!important;background:transparent!important}
-}
+        .sreesanth-intro {
+            font-size: 10px;
+            font-weight: 850;
+            letter-spacing: .19em;
+            color: #ffce1b
+        }
 
-/* Final mobile hero art direction: tighter portrait framing and a clean dark title area */
-@media(max-width:640px){
- .hero>.hero-bg{
-  background-image:
-   linear-gradient(90deg,rgba(2,12,27,.94) 0%,rgba(2,12,27,.78) 29%,rgba(2,12,27,.42) 48%,rgba(2,12,27,.04) 85%),
-   linear-gradient(0deg,#031226 0%,rgba(3,18,38,.32) 25%,rgba(3,18,38,.02) 76%),
-   url('assets/kacl-ambassador.png')!important;
-  background-size:100% 100%,100% 100%,auto 112%!important;
-  background-position:center,center,76% top!important;
-  background-repeat:no-repeat!important;
- }
- .hero>.hero-content>h1,.hero>.hero-content>h2{text-shadow:0 3px 16px rgba(0,0,0,.7)!important}
-}
-</style>
+        .sreesanth-banner strong {
+            font: 900 clamp(36px, 4.8vw, 64px)/.98 'Barlow Condensed', sans-serif;
+            letter-spacing: .018em;
+            text-transform: uppercase
+        }
+
+        .sreesanth-role {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.45;
+            color: #f3f6ff
+        }
+
+        @media(max-width:920px) and (min-width:641px) {
+            .hero>.hero-bg {
+                background-position: center, center, 58% center !important
+            }
+
+            .hero>.hero-content {
+                min-height: 695px !important
+            }
+
+            .hero>.hero-content>h1,
+            .hero>.hero-content>h2,
+            .hero>.hero-content>p,
+            .hero>.hero-content>.hero-actions,
+            .hero>.hero-content>small {
+                max-width: 57% !important
+            }
+
+            .sreesanth-banner {
+                max-width: 55%;
+                padding: 16px
+            }
+        }
+
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                background-image: linear-gradient(180deg, rgba(2, 12, 27, .05) 2%, rgba(2, 12, 27, .18) 27%, rgba(2, 12, 27, .82) 49%, #031226 83%), url('assets/kacl-ambassador.png') !important;
+                background-position: center, center top !important;
+                background-size: cover !important
+            }
+
+            .hero>.hero-content {
+                min-height: 0 !important;
+                padding-top: clamp(315px, 49svh, 445px) !important;
+                padding-bottom: 43px !important;
+                display: flex !important;
+                align-items: stretch !important;
+                justify-content: flex-start !important
+            }
+
+            .hero .sreesanth-banner {
+                order: 0 !important;
+                max-width: 100%;
+                margin: 0 0 23px !important;
+                padding: 14px 17px !important;
+                gap: 3px;
+                background: linear-gradient(120deg, rgba(4, 21, 42, .82), rgba(8, 31, 54, .52));
+                border-radius: 0 10px 10px 0
+            }
+
+            .sreesanth-banner strong {
+                font-size: clamp(38px, 11vw, 54px)
+            }
+
+            .sreesanth-role {
+                font-size: 12px
+            }
+
+            .hero>.hero-content>h1 {
+                order: 1 !important;
+                font-size: clamp(47px, 12vw, 70px) !important;
+                line-height: .93 !important;
+                margin: 0 0 9px !important;
+                max-width: 100% !important
+            }
+
+            .hero>.hero-content>h2 {
+                order: 2 !important;
+                margin: 0 0 12px !important;
+                max-width: 100% !important
+            }
+
+            .hero>.hero-content>p {
+                order: 3 !important;
+                max-width: 100% !important;
+                margin: 0 0 16px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                order: 4 !important;
+                max-width: 100% !important
+            }
+
+            .hero>.hero-content>small {
+                order: 5 !important;
+                max-width: 100% !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding-top: 310px !important
+            }
+
+            .sreesanth-role {
+                font-size: 11px
+            }
+        }
+
+        /* Mobile hero composition: keep Sreesanth's full face unobstructed and content below portrait */
+        @media(max-width:640px) {
+            .hero {
+                display: block !important;
+                background: #031226 !important;
+                overflow: hidden !important
+            }
+
+            .hero>.hero-bg {
+                display: block !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: auto !important;
+                height: clamp(345px, 103vw, 455px) !important;
+                width: 100% !important;
+                opacity: 1 !important;
+                background-image: linear-gradient(180deg, rgba(3, 18, 38, 0) 0%, rgba(3, 18, 38, 0) 66%, rgba(3, 18, 38, .18) 82%, #031226 100%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center 32% !important;
+                background-repeat: no-repeat !important;
+                z-index: -1 !important;
+            }
+
+            .hero>.hero-content {
+                position: relative !important;
+                z-index: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                min-height: 0 !important;
+                width: 100% !important;
+                padding-top: clamp(355px, 105vw, 465px) !important;
+                padding-bottom: 36px !important;
+                gap: 0 !important;
+                align-items: stretch !important;
+                justify-content: flex-start !important;
+                background: none !important;
+            }
+
+            .hero .sreesanth-banner {
+                position: relative !important;
+                order: 0 !important;
+                margin: 0 0 25px !important;
+                max-width: 100% !important;
+                padding: 15px 17px !important;
+                background: linear-gradient(120deg, #112b49, #07192d) !important;
+                border: 1px solid rgba(255, 206, 27, .4) !important;
+                border-left: 4px solid #ffce1b !important;
+                border-radius: 0 12px 12px 0 !important;
+                box-shadow: 0 8px 24px #0005 !important;
+                backdrop-filter: none !important;
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(38px, 10.3vw, 51px) !important;
+                line-height: 1 !important
+            }
+
+            .hero .sreesanth-intro {
+                font-size: 10px !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 12px !important;
+                line-height: 1.45 !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: clamp(46px, 11.5vw, 66px) !important;
+                line-height: .92 !important;
+                order: 1 !important;
+                margin: 0 0 8px !important
+            }
+
+            .hero>.hero-content>h2 {
+                order: 2 !important;
+                margin: 0 0 12px !important
+            }
+
+            .hero>.hero-content>p {
+                order: 3 !important;
+                margin: 0 0 17px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                order: 4 !important
+            }
+
+            .hero>.hero-content>small {
+                order: 5 !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-bg {
+                height: clamp(335px, 103vw, 405px) !important
+            }
+
+            .hero>.hero-content {
+                padding-top: clamp(345px, 105vw, 415px) !important
+            }
+        }
+
+        /* Compact split-composition hero: ambassador on right, headline left */
+        @media(max-width:640px) {
+            .hero {
+                position: relative !important;
+                min-height: 0 !important;
+                background: #031226 !important
+            }
+
+            .hero>.hero-bg {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background-image: linear-gradient(90deg, rgba(2, 13, 31, .99) 0%, rgba(2, 13, 31, .90) 28%, rgba(2, 13, 31, .43) 57%, rgba(2, 13, 31, .03) 100%), linear-gradient(0deg, #031226 1%, rgba(3, 18, 38, .72) 26%, transparent 65%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 67% top !important;
+                z-index: -1 !important
+            }
+
+            .hero>.hero-content {
+                padding: 110px 20px 30px !important;
+                min-height: 535px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-end !important;
+                gap: 0 !important;
+                background: none !important
+            }
+
+            .hero>.hero-content>h1 {
+                order: 0 !important;
+                font-size: clamp(34px, 9.8vw, 48px) !important;
+                line-height: .94 !important;
+                max-width: 62% !important;
+                margin: 0 0 7px !important;
+                text-shadow: 0 3px 15px #0008
+            }
+
+            .hero>.hero-content>h2 {
+                order: 1 !important;
+                font-size: clamp(19px, 5.2vw, 25px) !important;
+                line-height: 1.1 !important;
+                margin: 0 0 16px !important;
+                max-width: 65% !important
+            }
+
+            .hero .sreesanth-banner {
+                order: 2 !important;
+                margin: 0 0 15px !important;
+                padding: 10px 12px !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                gap: 3px !important;
+                background: rgba(3, 18, 38, .83) !important;
+                border-left: 3px solid #ffce1b !important;
+                box-shadow: 0 4px 18px #0005 !important;
+                border-radius: 0 9px 9px 0 !important
+            }
+
+            .hero .sreesanth-intro {
+                font-size: 9px !important;
+                letter-spacing: .12em !important
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(25px, 7vw, 32px) !important;
+                line-height: 1 !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 11px !important;
+                line-height: 1.35 !important
+            }
+
+            .hero>.hero-content>p {
+                order: 3 !important;
+                font-size: 13px !important;
+                line-height: 1.5 !important;
+                max-width: 100% !important;
+                margin: 0 0 12px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                order: 4 !important;
+                max-width: 100% !important;
+                gap: 9px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                font-size: 11px !important;
+                padding: 11px 13px !important
+            }
+
+            .hero>.hero-content>small {
+                order: 5 !important;
+                font-size: 10px !important;
+                margin-top: 10px !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                min-height: 510px !important;
+                padding: 103px 15px 25px !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: 35px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                font-size: 10px !important;
+                padding: 10px !important
+            }
+        }
+
+        /* Ambassador and registration share the lead row; Beyond headline moves below */
+        @media(max-width:640px) {
+            .hero {
+                position: relative !important;
+                background: #031226 !important;
+                isolation: isolate
+            }
+
+            .hero>.hero-bg {
+                position: absolute !important;
+                inset: 0 0 auto !important;
+                height: 570px !important;
+                width: 100% !important;
+                z-index: -1 !important;
+                background-image: linear-gradient(90deg, #031226ed 0%, #031226af 36%, #0312261a 72%), linear-gradient(0deg, #031226 0%, #03122640 31%, transparent 65%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 67% top !important;
+            }
+
+            .hero>.hero-content {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                min-height: 0 !important;
+                padding: 315px 18px 36px !important;
+                background: none !important;
+            }
+
+            .hero .sreesanth-banner {
+                order: 0 !important;
+                width: 55% !important;
+                max-width: 55% !important;
+                margin: 0 0 14px !important;
+                padding: 10px 9px !important;
+                background: rgba(4, 18, 37, .76) !important;
+                backdrop-filter: blur(5px);
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(22px, 6vw, 30px) !important
+            }
+
+            .hero .sreesanth-intro {
+                font-size: 8px !important;
+                letter-spacing: .07em !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 10px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                width: 55% !important;
+                max-width: 55% !important;
+                gap: 8px !important;
+                margin: 0 0 52px !important
+            }
+
+            .hero .hero-actions .btn {
+                width: 100% !important;
+                min-height: 42px !important;
+                padding: 10px 8px !important;
+                font-size: 10px !important;
+                justify-content: center !important;
+                text-align: center !important;
+                white-space: normal !important;
+                line-height: 1.1 !important
+            }
+
+            .hero .hero-actions .cta-arrow {
+                width: 13px;
+                height: 13px;
+                flex-shrink: 0
+            }
+
+            .hero>.hero-content>h1 {
+                order: 2 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                font-size: clamp(43px, 11.6vw, 60px) !important;
+                line-height: .92 !important;
+                margin: 0 0 10px !important
+            }
+
+            .hero>.hero-content>h2 {
+                order: 3 !important;
+                max-width: 100% !important;
+                margin: 0 0 13px !important
+            }
+
+            .hero>.hero-content>p {
+                order: 4 !important;
+                max-width: 100% !important;
+                font-size: 13px !important;
+                margin: 0 0 12px !important
+            }
+
+            .hero>.hero-content>small {
+                order: 5 !important;
+                max-width: 100% !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding: 285px 14px 32px !important
+            }
+
+            .hero>.hero-bg {
+                height: 545px !important
+            }
+
+            .hero .sreesanth-banner,
+            .hero>.hero-content>.hero-actions {
+                width: 58% !important;
+                max-width: 58% !important
+            }
+        }
+
+        /* Final mobile hero: Beyond headline FIRST, registration alongside, ambassador at right */
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                height: 100% !important;
+                background-image: linear-gradient(90deg, rgba(2, 13, 31, .96) 0%, rgba(2, 13, 31, .79) 38%, rgba(2, 13, 31, .13) 100%), linear-gradient(0deg, #031226 3%, rgba(3, 18, 38, .34) 52%, transparent 85%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 64% top !important
+            }
+
+            .hero>.hero-content {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) minmax(0, .92fr) !important;
+                grid-template-areas: "headline buttons" "tagline buttons" "ambassador ambassador" "summary summary" "registration registration" !important;
+                column-gap: 10px !important;
+                row-gap: 10px !important;
+                padding: 165px 15px 33px !important;
+                min-height: 610px !important;
+                align-content: start !important;
+                align-items: center !important;
+            }
+
+            .hero>.hero-content>h1 {
+                grid-area: headline !important;
+                order: unset !important;
+                width: auto !important;
+                max-width: 100% !important;
+                font-size: clamp(34px, 9.3vw, 45px) !important;
+                line-height: .94 !important;
+                margin: 0 !important;
+                align-self: end !important
+            }
+
+            .hero>.hero-content>h2 {
+                grid-area: tagline !important;
+                order: unset !important;
+                max-width: 100% !important;
+                font-size: clamp(15px, 4.1vw, 20px) !important;
+                margin: 0 !important;
+                align-self: start !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                grid-area: buttons !important;
+                order: unset !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-self: center !important;
+                margin: 0 !important;
+                gap: 8px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                width: 100% !important;
+                min-height: 47px !important;
+                font-size: clamp(9px, 2.3vw, 11px) !important;
+                padding: 9px 5px !important;
+                white-space: normal !important;
+                line-height: 1.25 !important;
+                justify-content: center !important;
+                text-align: center !important
+            }
+
+            .hero .hero-actions .cta-arrow {
+                width: 13px !important;
+                height: 13px !important
+            }
+
+            .hero .sreesanth-banner {
+                grid-area: ambassador !important;
+                order: unset !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 32px 0 5px !important;
+                padding: 12px 14px !important;
+                background: rgba(3, 18, 38, .81) !important
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(27px, 7vw, 34px) !important
+            }
+
+            .hero>.hero-content>p {
+                grid-area: summary !important;
+                order: unset !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                font-size: 13px !important
+            }
+
+            .hero>.hero-content>small {
+                grid-area: registration !important;
+                order: unset !important;
+                margin: 0 !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding: 145px 11px 28px !important;
+                column-gap: 7px !important;
+                min-height: 590px !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: 33px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                font-size: 9px !important
+            }
+        }
+
+        /* Correct mobile layout: headline first, then buttons LEFT and ambassador RIGHT */
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                height: 100% !important;
+                background-image: linear-gradient(90deg, rgba(2, 13, 31, .96) 0%, rgba(2, 13, 31, .70) 40%, rgba(2, 13, 31, .1) 100%), linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .25) 55%, transparent 92%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 68% top !important
+            }
+
+            .hero>.hero-content {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+                grid-template-areas: "headline headline" "tagline tagline" "buttons ambassador" "summary summary" "registration registration" !important;
+                column-gap: 12px !important;
+                row-gap: 9px !important;
+                align-items: center !important;
+                padding: 122px 16px 33px !important;
+                min-height: 590px !important;
+                align-content: start !important;
+            }
+
+            .hero>.hero-content>h1 {
+                grid-area: headline !important;
+                font-size: clamp(40px, 11vw, 59px) !important;
+                max-width: 100% !important;
+                margin: 0 !important
+            }
+
+            .hero>.hero-content>h2 {
+                grid-area: tagline !important;
+                font-size: clamp(20px, 5vw, 27px) !important;
+                max-width: 100% !important;
+                margin: 0 0 24px !important
+            }
+
+            .hero>.hero-content>.hero-actions {
+                grid-area: buttons !important;
+                display: flex !important;
+                flex-direction: column !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                gap: 10px !important;
+                align-self: end !important;
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                width: 100% !important;
+                min-height: 48px !important;
+                padding: 10px 7px !important;
+                font-size: clamp(10px, 2.5vw, 12px) !important;
+                line-height: 1.25 !important;
+                text-align: center !important;
+                justify-content: center !important;
+                white-space: normal !important
+            }
+
+            .hero .sreesanth-banner {
+                grid-area: ambassador !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                align-self: end !important;
+                margin: 0 !important;
+                padding: 10px !important;
+                background: rgba(3, 18, 38, .72) !important;
+                border-left: 3px solid #ffce1b !important;
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: clamp(23px, 6vw, 32px) !important
+            }
+
+            .hero .sreesanth-intro {
+                font-size: 8px !important;
+                letter-spacing: .05em !important
+            }
+
+            .hero .sreesanth-role {
+                font-size: 10px !important;
+                line-height: 1.35 !important
+            }
+
+            .hero>.hero-content>p {
+                grid-area: summary !important;
+                max-width: 100% !important;
+                margin: 30px 0 4px !important;
+                font-size: 13px !important
+            }
+
+            .hero>.hero-content>small {
+                grid-area: registration !important;
+                max-width: 100% !important;
+                margin: 0 !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding: 105px 12px 28px !important;
+                column-gap: 8px !important
+            }
+
+            .hero>.hero-content>h1 {
+                font-size: 39px !important
+            }
+
+            .hero>.hero-content>h2 {
+                font-size: 19px !important
+            }
+
+            .hero>.hero-content>.hero-actions .btn {
+                font-size: 9px !important
+            }
+
+            .hero .sreesanth-banner strong {
+                font-size: 23px !important
+            }
+        }
+
+        /* Final mobile spacing: bring the hero copy lower and remove dead space below */
+        @media(max-width:640px) {
+            .hero {
+                min-height: 0 !important;
+                height: auto !important
+            }
+
+            .hero>.hero-content {
+                min-height: 0 !important;
+                padding-top: clamp(180px, 27svh, 260px) !important;
+                padding-bottom: 19px !important;
+                align-content: start !important;
+            }
+
+            .hero>.hero-content>p {
+                margin-top: 19px !important
+            }
+
+            .hero>.hero-content>small {
+                margin-bottom: 0 !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding-top: clamp(160px, 24svh, 220px) !important;
+                padding-bottom: 17px !important
+            }
+        }
+
+        /* Mobile ambassador visibility: give the portrait more uninterrupted space above text */
+        @media(max-width:640px) {
+            .hero>.hero-content {
+                padding-top: clamp(255px, 37svh, 350px) !important;
+                padding-bottom: 17px !important;
+                min-height: 0 !important;
+            }
+
+            .hero>.hero-bg {
+                background-position: center, center, 68% top !important
+            }
+        }
+
+        @media(max-width:380px) {
+            .hero>.hero-content {
+                padding-top: clamp(235px, 35svh, 310px) !important;
+                padding-bottom: 15px !important
+            }
+        }
+
+        /* Fix missing mobile ambassador background: isolate created a negative stacking layer */
+        @media(max-width:640px) {
+            .hero {
+                isolation: isolate !important;
+                position: relative !important;
+                background: #031226 !important
+            }
+
+            .hero>.hero-bg {
+                display: block !important;
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                z-index: 0 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                background-image: linear-gradient(90deg, rgba(2, 13, 31, .75) 0%, rgba(2, 13, 31, .35) 45%, rgba(2, 13, 31, .03) 100%), linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .08) 65%, transparent 100%), url('assets/kacl-ambassador.png') !important;
+                background-size: cover !important;
+                background-position: center, center, 68% top !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .hero>.hero-content {
+                position: relative !important;
+                z-index: 1 !important;
+                background: transparent !important
+            }
+        }
+
+        /* Final mobile hero art direction: tighter portrait framing and a clean dark title area */
+        @media(max-width:640px) {
+            .hero>.hero-bg {
+                background-image:
+                    linear-gradient(90deg, rgba(2, 12, 27, .94) 0%, rgba(2, 12, 27, .78) 29%, rgba(2, 12, 27, .42) 48%, rgba(2, 12, 27, .04) 85%),
+                    linear-gradient(0deg, #031226 0%, rgba(3, 18, 38, .32) 25%, rgba(3, 18, 38, .02) 76%),
+                    url('assets/kacl-ambassador.png') !important;
+                background-size: 103% 104%, 100% 100%, auto 116% !important;
+                background-position: top, center, 28% 73% !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .hero>.hero-content>h1,
+            .hero>.hero-content>h2 {
+                text-shadow: 0 3px 16px rgba(0, 0, 0, .7) !important
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav><a class="brand" href="#top" aria-label="KACL Season 4 home"><img src="assets/kacl-logo.png"
-                        alt="KACL Grand Season 4 logo"></a><button type="button" class="happiness-trigger header-happiness-trigger" data-happiness-open aria-haspopup="dialog" aria-label="About KACL Happiness Index"><img class="header-happiness-logo" src="assets/happiness-index.png" alt="KACL Happiness Index logo" loading="eager"></button>
+                        alt="KACL Grand Season 4 logo"></a><button type="button"
+                    class="happiness-trigger header-happiness-trigger" data-happiness-open aria-haspopup="dialog"
+                    aria-label="About KACL Happiness Index"><img class="header-happiness-logo"
+                        src="assets/happiness-index.png" alt="KACL Happiness Index logo" loading="eager"></button>
                 <div class="navlinks"><a href="#about">The League</a><a href="#rewards">Player Rewards</a><a
                         href="#franchises">Franchise</a><a href="#schedule">Schedule</a><a
-                        href="https://leaguelink.in/leagues/5465530/kacl-grand-season-4/register" class="btn header-register"
-                        target="_blank" rel="noopener noreferrer"><span class="register-label">Register Now</span></a></div>
+                        href="https://leaguelink.in/leagues/5465530/kacl-grand-season-4/register"
+                        class="btn header-register" target="_blank" rel="noopener noreferrer"><span
+                            class="register-label">Register Now</span></a></div>
             </nav>
         </div>
     </header>
@@ -2140,7 +3371,8 @@
 
             <div class="container hero-content">
 
-                <div class="sreesanth-banner" aria-label="S Sreesanth, KACL Proud Ambassador and KACL Grand Season 4 Team Owner">
+                <div class="sreesanth-banner"
+                    aria-label="S Sreesanth, KACL Proud Ambassador and KACL Grand Season 4 Team Owner">
                     <span class="sreesanth-intro">INTRODUCING OUR AMBASSADOR</span>
                     <strong>S SREESANTH</strong>
                     <span class="sreesanth-role">KACL Proud Ambassador &amp;<br>KACL Grand Season 4 Team Owner</span>
@@ -2207,7 +3439,10 @@
                             class="mini-total">TOTAL VALUE ₹48,000</b></div>
                     <div class="mini image-reward reward-mom-playoff"><strong>₹5,000</strong><span>Player of the Match ·
                             Playoffs</span><b class="mini-total">TOTAL VALUE ₹35,000</b></div>
-                    <button type="button" class="mini happiness-tile happiness-trigger" data-happiness-open aria-haspopup="dialog" aria-label="Learn about KACL Happiness Index"><img class="happiness-index-card-logo" src="assets/happiness-index.png" alt="KACL Happiness Index"></button>
+                    <button type="button" class="mini happiness-tile happiness-trigger" data-happiness-open
+                        aria-haspopup="dialog" aria-label="Learn about KACL Happiness Index"><img
+                            class="happiness-index-card-logo" src="assets/happiness-index.png"
+                            alt="KACL Happiness Index"></button>
                 </div>
                 <p class="disclaimer">Motorcycles or equivalent awards are subject to the KACL’s prize policy. One bike
                     per player; other award reassignment conditions apply. Applicable taxes on prizes may be borne by
@@ -2386,37 +3621,74 @@
         </div>
     </footer>
 
-<dialog id="happiness-dialog" class="happiness-dialog" aria-labelledby="happiness-title" aria-describedby="happiness-intro">
-<div class="happiness-dialog-header"><img src="assets/happiness-index.png" alt="KACL Happiness Index"><button type="button" class="happiness-close" data-happiness-close aria-label="Close Happiness Index information">×</button></div>
-<div class="happiness-dialog-content">
-<h2 id="happiness-title">KACL Happiness Index™️</h2>
-<p class="happiness-subtitle">More Rewards. More Recognition. More Reasons to Smile.</p>
-<p id="happiness-intro">The KACL Happiness Index™️ is our commitment to making KACL Grand Season 4 more rewarding for both players and franchise owners.</p>
-<p>Rather than measuring success only through match results and trophies, we create additional opportunities for participants to earn rewards, receive recognition, and enjoy memorable experiences throughout the tournament.</p>
-<h3>How Does It Work?</h3>
-<div class="happiness-steps">
-<section><span>01</span><div><h4>Every Performance Counts</h4><p>Players have opportunities to earn rewards for individual achievements, including catches, Man of the Match awards, and outstanding performances with the bat, ball, or behind the stumps.</p></div></section>
-<section><span>02</span><div><h4>Every Milestone Matters</h4><p>From league victories to knockout-stage achievements, the tournament recognizes important moments with meaningful rewards for players and franchise owners.</p></div></section>
-<section><span>03</span><div><h4>Every Participant Matters</h4><p>The Happiness Index extends beyond the winning team. It is designed to recognize individual excellence, reward team achievements, and make participation more valuable for everyone involved.</p></div></section>
-<section><span>04</span><div><h4>Partners Make More Possible</h4><p>Through brand partnerships, the Happiness Index creates opportunities for additional rewards, products, experiences, and special recognitions—connecting sponsors with players and owners in meaningful ways.</p></div></section>
-</div>
-<h3>Our Philosophy</h3>
-<p>The Happiness Index is not simply about how much prize money is distributed. It is about how many opportunities we create to celebrate achievement, reward effort, and make the tournament memorable.</p>
-<p>At KACL, the trophy celebrates the winner. The Happiness Index celebrates the people who make the game special.</p>
-<p class="happiness-final">Measuring success by the smiles we create.</p>
-</div></dialog>
+    <dialog id="happiness-dialog" class="happiness-dialog" aria-labelledby="happiness-title"
+        aria-describedby="happiness-intro">
+        <div class="happiness-dialog-header"><img src="assets/happiness-index.png" alt="KACL Happiness Index"><button
+                type="button" class="happiness-close" data-happiness-close
+                aria-label="Close Happiness Index information">×</button></div>
+        <div class="happiness-dialog-content">
+            <h2 id="happiness-title">KACL Happiness Index™️</h2>
+            <p class="happiness-subtitle">More Rewards. More Recognition. More Reasons to Smile.</p>
+            <p id="happiness-intro">The KACL Happiness Index™️ is our commitment to making KACL Grand Season 4 more
+                rewarding for both players and franchise owners.</p>
+            <p>Rather than measuring success only through match results and trophies, we create additional opportunities
+                for participants to earn rewards, receive recognition, and enjoy memorable experiences throughout the
+                tournament.</p>
+            <h3>How Does It Work?</h3>
+            <div class="happiness-steps">
+                <section><span>01</span>
+                    <div>
+                        <h4>Every Performance Counts</h4>
+                        <p>Players have opportunities to earn rewards for individual achievements, including catches,
+                            Man of the Match awards, and outstanding performances with the bat, ball, or behind the
+                            stumps.</p>
+                    </div>
+                </section>
+                <section><span>02</span>
+                    <div>
+                        <h4>Every Milestone Matters</h4>
+                        <p>From league victories to knockout-stage achievements, the tournament recognizes important
+                            moments with meaningful rewards for players and franchise owners.</p>
+                    </div>
+                </section>
+                <section><span>03</span>
+                    <div>
+                        <h4>Every Participant Matters</h4>
+                        <p>The Happiness Index extends beyond the winning team. It is designed to recognize individual
+                            excellence, reward team achievements, and make participation more valuable for everyone
+                            involved.</p>
+                    </div>
+                </section>
+                <section><span>04</span>
+                    <div>
+                        <h4>Partners Make More Possible</h4>
+                        <p>Through brand partnerships, the Happiness Index creates opportunities for additional rewards,
+                            products, experiences, and special recognitions—connecting sponsors with players and owners
+                            in meaningful ways.</p>
+                    </div>
+                </section>
+            </div>
+            <h3>Our Philosophy</h3>
+            <p>The Happiness Index is not simply about how much prize money is distributed. It is about how many
+                opportunities we create to celebrate achievement, reward effort, and make the tournament memorable.</p>
+            <p>At KACL, the trophy celebrates the winner. The Happiness Index celebrates the people who make the game
+                special.</p>
+            <p class="happiness-final">Measuring success by the smiles we create.</p>
+        </div>
+    </dialog>
     <script>const ob = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ob.unobserve(e.target) } }) }, { threshold: .07 }); document.querySelectorAll('.reveal').forEach(el => ob.observe(el));</script>
-<script>
-(function(){
- const dialog=document.getElementById('happiness-dialog');
- const triggers=document.querySelectorAll('[data-happiness-open]');
- const close=dialog.querySelector('[data-happiness-close]');
- let opener=null;
- triggers.forEach(trigger=>trigger.addEventListener('click',()=>{opener=trigger;if(!dialog.open)dialog.showModal();}));
- close.addEventListener('click',()=>dialog.close());
- dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
- dialog.addEventListener('close',()=>{if(opener)opener.focus()});
-})();
-</script></body>
+    <script>
+        (function () {
+            const dialog = document.getElementById('happiness-dialog');
+            const triggers = document.querySelectorAll('[data-happiness-open]');
+            const close = dialog.querySelector('[data-happiness-close]');
+            let opener = null;
+            triggers.forEach(trigger => trigger.addEventListener('click', () => { opener = trigger; if (!dialog.open) dialog.showModal(); }));
+            close.addEventListener('click', () => dialog.close());
+            dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close() });
+            dialog.addEventListener('close', () => { if (opener) opener.focus() });
+        })();
+    </script>
+</body>
 
 </html>
