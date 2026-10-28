@@ -3399,6 +3399,23 @@
  .hero>.hero-content>p{grid-area:summary!important;order:unset!important;max-width:620px!important;width:auto!important;margin:10px 0 0!important}
  .hero>.hero-content>small{grid-area:registration!important;order:unset!important;max-width:620px!important;margin:0!important}
 }
+
+/* Desktop ambassador plaque visually docked to the right side of the viewport */
+@media(min-width:921px){
+ .hero .sreesanth-banner{
+  justify-self:end!important;
+  width:clamp(360px,34vw,540px)!important;
+  max-width:none!important;
+  margin-right:calc((min(100vw, 100% + 0px) - 100vw)/2)!important;
+  transform:translateX(max(0px,calc((100vw - 1180px)/2)))!important;
+  border-radius:14px 0 0 14px!important;
+  border-left:4px solid #ffce1b!important;
+  border-right:0!important;
+  padding:19px 26px!important;
+  background:linear-gradient(100deg,rgba(5,20,40,.92),rgba(5,20,40,.78))!important;
+  box-shadow:-14px 12px 36px rgba(0,0,0,.32)!important;
+ }
+}
 </style>
 </head>
 
