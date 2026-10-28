@@ -1872,6 +1872,31 @@
   background-position:center,90% top!important;
  }
 }
+
+/* One-piece ambassador hero: full-bleed image and translucent title panel */
+.hero{position:relative!important;display:block!important;min-height:0!important;height:auto!important;background:#041329!important;isolation:isolate}
+.hero>.hero-bg{display:block!important;z-index:-2!important;inset:0!important;opacity:1!important;background-image:linear-gradient(90deg,rgba(2,13,30,.97) 0%,rgba(2,13,30,.86) 32%,rgba(2,13,30,.24) 73%,rgba(2,13,30,.04)),linear-gradient(0deg,rgba(2,13,30,.80),transparent 37%),url('assets/kacl-ambassador.jpg')!important;background-size:cover!important;background-position:center,center,center 25%!important}
+.hero::before{display:none!important}
+.hero>.hero-content{position:relative!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;min-height:clamp(620px,78vh,850px)!important;padding-top:115px!important;padding-bottom:70px!important;background:none!important}
+.hero>.hero-content>h1,.hero>.hero-content>h2,.hero>.hero-content>p,.hero>.hero-content>.hero-actions,.hero>.hero-content>small{max-width:min(560px,54%)!important}
+.sreesanth-banner{display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:495px;margin:0 0 26px;padding:19px 25px 19px 22px;color:white;background:linear-gradient(110deg,rgba(4,22,44,.84),rgba(4,22,44,.44));border:1px solid rgba(255,210,71,.44);border-left:4px solid #ffce1b;border-radius:0 14px 14px 0;box-shadow:0 12px 34px rgba(0,0,0,.2);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px)}
+.sreesanth-intro{font-size:10px;font-weight:850;letter-spacing:.19em;color:#ffce1b}
+.sreesanth-banner strong{font:900 clamp(36px,4.8vw,64px)/.98 'Barlow Condensed',sans-serif;letter-spacing:.018em;text-transform:uppercase}
+.sreesanth-role{font-size:14px;font-weight:700;line-height:1.45;color:#f3f6ff}
+@media(max-width:920px) and (min-width:641px){.hero>.hero-bg{background-position:center,center,58% center!important}.hero>.hero-content{min-height:695px!important}.hero>.hero-content>h1,.hero>.hero-content>h2,.hero>.hero-content>p,.hero>.hero-content>.hero-actions,.hero>.hero-content>small{max-width:57%!important}.sreesanth-banner{max-width:55%;padding:16px}}
+@media(max-width:640px){
+.hero>.hero-bg{background-image:linear-gradient(180deg,rgba(2,12,27,.05) 2%,rgba(2,12,27,.18) 27%,rgba(2,12,27,.82) 49%,#031226 83%),url('assets/kacl-ambassador.jpg')!important;background-position:center,center top!important;background-size:cover!important}
+.hero>.hero-content{min-height:0!important;padding-top:clamp(315px,49svh,445px)!important;padding-bottom:43px!important;display:flex!important;align-items:stretch!important;justify-content:flex-start!important}
+.hero .sreesanth-banner{order:0!important;max-width:100%;margin:0 0 23px!important;padding:14px 17px!important;gap:3px;background:linear-gradient(120deg,rgba(4,21,42,.82),rgba(8,31,54,.52));border-radius:0 10px 10px 0}
+.sreesanth-banner strong{font-size:clamp(38px,11vw,54px)}
+.sreesanth-role{font-size:12px}
+.hero>.hero-content>h1{order:1!important;font-size:clamp(47px,12vw,70px)!important;line-height:.93!important;margin:0 0 9px!important;max-width:100%!important}
+.hero>.hero-content>h2{order:2!important;margin:0 0 12px!important;max-width:100%!important}
+.hero>.hero-content>p{order:3!important;max-width:100%!important;margin:0 0 16px!important}
+.hero>.hero-content>.hero-actions{order:4!important;max-width:100%!important}
+.hero>.hero-content>small{order:5!important;max-width:100%!important}
+}
+@media(max-width:380px){.hero>.hero-content{padding-top:310px!important}.sreesanth-role{font-size:11px}}
 </style>
 </head>
 
@@ -1890,17 +1915,14 @@
     <main id="top">
         <section class="hero">
             <div class="hero-bg" aria-hidden="true"></div>
-                <aside class="ambassador-spotlight" aria-label="KACL proud ambassador and Grand Season 4 team owner">
-                    <div class="ambassador-picture" role="img" aria-label="KACL proud ambassador wearing a cricket jersey"></div>
-                    <div class="ambassador-copy">
-                        <span class="ambassador-kicker"><span class="ambassador-dot"></span> GRAND SEASON 4 SPOTLIGHT</span>
-                        <strong>KACL PROUD<br><em>AMBASSADOR</em></strong>
-                        <span class="ambassador-divider"></span>
-                        <p>&amp; KACL Grand Season 4 <b>Team Owner</b></p>
-                    </div>
-                </aside>
+
             <div class="container hero-content">
 
+                <div class="sreesanth-banner" aria-label="S Sreesanth, KACL Proud Ambassador and KACL Grand Season 4 Team Owner">
+                    <span class="sreesanth-intro">INTRODUCING OUR AMBASSADOR</span>
+                    <strong>S SREESANTH</strong>
+                    <span class="sreesanth-role">KACL Proud Ambassador &amp;<br>KACL Grand Season 4 Team Owner</span>
+                </div>
                 <h1>BEYOND<br><span>THE GAME.</span></h1>
                 <h2>Beyond the Trophy.</h2>
                 <p>12 franchises. Bigger rewards. A bigger stage for Kerala's amateur cricketing talent. The grandest
