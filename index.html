@@ -3524,6 +3524,30 @@
  .hero>.hero-content>h1{font-size:clamp(65px,6vw,85px)!important}
  .hero .sreesanth-banner{transform:none!important}
 }
+
+/* KACL stadium ambassador artwork: true background asset, never a flattened website screenshot */
+@media(min-width:921px){
+ .hero>.hero-bg{background:radial-gradient(ellipse at 72% 35%,#183856 0%,#061b35 56%,#031329 100%)!important}
+ .hero>.hero-bg::after{
+   content:""!important;position:absolute!important;inset:0 0 0 auto!important;
+   width:64%!important;height:100%!important;
+   background-image:linear-gradient(0deg,rgba(3,17,36,.35),transparent 65%),url('assets/kacl-stadium-ambassador.jpg')!important;
+   background-position:center,right center!important;
+   background-size:100% 100%,auto 100%!important;
+   background-repeat:no-repeat!important;
+   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%)!important;
+   mask-image:linear-gradient(90deg,transparent 0%,#000 28%)!important;
+ }
+ .hero>.hero-content{position:relative!important;z-index:1!important}
+}
+@media(max-width:640px){
+ .hero>.hero-bg{
+   background-image:linear-gradient(90deg,rgba(2,13,31,.94) 0%,rgba(2,13,31,.65) 37%,rgba(2,13,31,.15) 100%),linear-gradient(0deg,#031226 0%,rgba(3,18,38,.16) 60%,transparent 100%),url('assets/kacl-stadium-ambassador.jpg')!important;
+   background-size:100% 100%,100% 100%,auto 100%!important;
+   background-position:center,center,right top!important;
+   background-repeat:no-repeat!important;
+ }
+}
 </style>
 </head>
 
