@@ -2077,6 +2077,19 @@
 @media(max-width:380px){
  .hero>.hero-content{padding-top:clamp(160px,24svh,220px)!important;padding-bottom:17px!important}
 }
+
+/* Mobile ambassador visibility: give the portrait more uninterrupted space above text */
+@media(max-width:640px){
+ .hero>.hero-content{
+  padding-top:clamp(255px,37svh,350px)!important;
+  padding-bottom:17px!important;
+  min-height:0!important;
+ }
+ .hero>.hero-bg{background-position:center,center,68% top!important}
+}
+@media(max-width:380px){
+ .hero>.hero-content{padding-top:clamp(235px,35svh,310px)!important;padding-bottom:15px!important}
+}
 </style>
 </head>
 
